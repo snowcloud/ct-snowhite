@@ -1,0 +1,196 @@
+[
+  {
+    "pk": 2, 
+    "model": "ct_groups.ctgroup", 
+    "fields": {
+      "note": "A second test group.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+      "is_public": 0, 
+      "tags": "", 
+      "name": "Test Group", 
+      "slug": "group-two"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "ct_groups.ctgroup", 
+    "fields": {
+      "note": "A first test group.\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+      "is_public": 1, 
+      "tags": "", 
+      "name": "Group One", 
+      "slug": "group-one"
+    }
+  }, 
+  {
+    "pk": 1, 
+    "model": "ct_groups.ctgrouppermission", 
+    "fields": {
+      "group": 1, 
+      "name": "group", 
+      "write_permission": "40", 
+      "read_permission": "10"
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "ct_groups.ctgrouppermission", 
+    "fields": {
+      "group": 1, 
+      "name": "wiki", 
+      "write_permission": "40", 
+      "read_permission": "10"
+    }
+  }, 
+  {
+    "pk": 3, 
+    "model": "ct_groups.ctgrouppermission", 
+    "fields": {
+      "group": 1, 
+      "name": "blog", 
+      "write_permission": "40", 
+      "read_permission": "10"
+    }
+  }, 
+  {
+    "pk": 4, 
+    "model": "ct_groups.ctgrouppermission", 
+    "fields": {
+      "group": 1, 
+      "name": "comment", 
+      "write_permission": "20", 
+      "read_permission": "10"
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "ct_groups.ctgrouppermission", 
+    "fields": {
+      "group": 2, 
+      "name": "group", 
+      "write_permission": "50", 
+      "read_permission": "20"
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "ct_groups.ctgrouppermission", 
+    "fields": {
+      "group": 2, 
+      "name": "blog", 
+      "write_permission": "50", 
+      "read_permission": "20"
+    }
+  }, 
+  {
+    "pk": 7, 
+    "model": "ct_groups.ctgrouppermission", 
+    "fields": {
+      "group": 2, 
+      "name": "comment", 
+      "write_permission": "50", 
+      "read_permission": "20"
+    }
+  }, 
+  {
+    "pk": 8, 
+    "model": "ct_groups.ctgrouppermission", 
+    "fields": {
+      "group": 2, 
+      "name": "wiki", 
+      "write_permission": "50", 
+      "read_permission": "20"
+    }
+  }, 
+  {
+    "pk": 9, 
+    "model": "ct_groups.ctgrouppermission", 
+    "fields": {
+      "group": 1, 
+      "name": "resource", 
+      "write_permission": "40", 
+      "read_permission": "30"
+    }
+  },
+  {
+    "pk": 10, 
+    "model": "ct_groups.ctgrouppermission", 
+    "fields": {
+      "group": 2, 
+      "name": "resource", 
+      "write_permission": "40", 
+      "read_permission": "30"
+    }
+  },
+  {
+    "pk": 3, 
+    "model": "ct_groups.groupmembership", 
+    "fields": {
+      "group": 1, 
+      "is_active": 1, 
+      "is_manager": 0, 
+      "note": "", 
+      "user": 1, 
+      "post_updates": "single",
+      "tool_updates": "single",
+      "is_editor": 0
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "ct_groups.groupmembership", 
+    "fields": {
+      "group": 2, 
+      "is_active": 1, 
+      "is_manager": 0, 
+      "note": "", 
+      "user": 2, 
+      "post_updates": "single",
+      "tool_updates": "single",
+      "is_editor": 1
+    }
+  }, 
+  {
+    "pk": 5, 
+    "model": "ct_groups.groupmembership", 
+    "fields": {
+      "group": 1, 
+      "is_active": 1, 
+      "is_manager": 0, 
+      "note": "", 
+      "user": 3, 
+      "post_updates": "single",
+      "tool_updates": "single",
+      "is_editor": 0
+    }
+  }, 
+  {
+    "pk": 6, 
+    "model": "ct_groups.groupmembership", 
+    "fields": {
+      "group": 2, 
+      "is_active": 1, 
+      "is_manager": 0, 
+      "note": "", 
+      "user": 1, 
+      "post_updates": "single",
+      "tool_updates": "single",
+      "is_editor": 0
+    }
+  },
+  {
+    "pk": 1, 
+    "model": "ct_groups.ctpost", 
+    "fields": {
+      "ct_group": 2, 
+      "categories": []
+    }
+  }, 
+  {
+    "pk": 2, 
+    "model": "ct_groups.ctpost", 
+    "fields": {
+      "ct_group": 2, 
+      "categories": []
+    }
+  }
+]

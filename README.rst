@@ -8,3 +8,10 @@ About
 This is a starter `Django <http://djangoproject.com>`_ project for the ClinicalTemplates web framework.
 
 *Please note- this is incomplete and not currently installable.*
+
+Initializing database
+-----
+cd ct-snowhite/snowhite
+./manage.py syncdb
+./manage.py migrate --fake
+

@@ -1,0 +1,92 @@
+[
+{
+  "pk": 1, 
+  "model": "comments.comment", 
+  "fields": {
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.\r\n\r\nwww.clinicaltemplates.org\r\n\r\n\r\n* asdsdf sdfasd sdfa sdfa sd\r\n* sdfasksdf asdfkasdkfasdkak sdfaksd asdkaskda aa\r\n\r\nDuis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+    "user_url": "", 
+    "submit_date": "2008-10-21 01:41:36", 
+    "ip_address": "78.86.128.159", 
+    "object_pk": "1", 
+    "site": 1, 
+    "is_removed": 0, 
+    "user": 1, 
+    "content_type": 14, 
+    "is_public": 1, 
+    "user_name": "Derek Hoy", 
+    "user_email": "spotify@ganzie.com"
+  }
+}, 
+{
+  "pk": 2, 
+  "model": "comments.comment", 
+  "fields": {
+    "comment": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.\r\n\r\nUt enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+    "user_url": "", 
+    "submit_date": "2008-10-21 15:13:53", 
+    "ip_address": "78.86.128.159", 
+    "object_pk": "1", 
+    "site": 1, 
+    "is_removed": 0, 
+    "user": 1, 
+    "content_type": 14, 
+    "is_public": 1, 
+    "user_name": "Derek Hoy", 
+    "user_email": "derek.hoy@gmail.com"
+  }
+}, 
+{
+  "pk": 3, 
+  "model": "comments.comment", 
+  "fields": {
+    "comment": "Lorem ipsum dolor sit amet, \r\n\r\n\r\nconsectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+    "user_url": "", 
+    "submit_date": "2008-10-21 17:43:16", 
+    "ip_address": "78.86.128.159", 
+    "object_pk": "1", 
+    "site": 1, 
+    "is_removed": 0, 
+    "user": 1, 
+    "content_type": 14, 
+    "is_public": 1, 
+    "user_name": "Derek Hoy", 
+    "user_email": "derek.hoy@gmail.com"
+  }
+}, 
+{
+  "pk": 4, 
+  "model": "comments.comment", 
+  "fields": {
+    "comment": "I can't wait.\r\n\r\nSee you all there, unless you're in Helsinki.", 
+    "user_url": "", 
+    "submit_date": "2008-10-22 11:23:16", 
+    "ip_address": "78.86.128.159", 
+    "object_pk": "2", 
+    "site": 1, 
+    "is_removed": 0, 
+    "user": 1, 
+    "content_type": 14, 
+    "is_public": 1, 
+    "user_name": "Derek Hoy", 
+    "user_email": "derek.hoy@gmail.com"
+  }
+}, 
+{
+  "pk": 5, 
+  "model": "comments.comment", 
+  "fields": {
+    "comment": "Ah... I'll be in Helsinki.\r\n\r\nIf I can get the bus fare.", 
+    "user_url": "", 
+    "submit_date": "2008-10-22 11:29:13", 
+    "ip_address": "78.86.128.159", 
+    "object_pk": "2", 
+    "site": 1, 
+    "is_removed": 0, 
+    "user": 1, 
+    "content_type": 14, 
+    "is_public": 1, 
+    "user_name": "Derek Hoy", 
+    "user_email": "derek.hoy@gmail.com"
+  }
+}
+]

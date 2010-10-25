@@ -1,0 +1,58 @@
+[
+{
+  "pk": 1, 
+  "model": "auth.user", 
+  "fields": {
+    "username": "derek", 
+    "first_name": "Derek", 
+    "last_name": "Hoy", 
+    "is_active": 1, 
+    "is_superuser": 1, 
+    "is_staff": 1, 
+    "last_login": "2008-12-10 12:46:06", 
+    "groups": [], 
+    "user_permissions": [], 
+    "password": "sha1$f46f8$a2fdf6d5e15c848df81a068bfe80d794a0063979", 
+    "email": "derek.hoy@gmail.com", 
+    "date_joined": "2007-05-22 23:54:20"
+  }
+}, 
+{
+  "pk": 2, 
+  "model": "auth.user", 
+  "fields": {
+    "username": "nick", 
+    "first_name": "Nick", 
+    "last_name": "Hardiker", 
+    "is_active": 1, 
+    "is_superuser": 1, 
+    "is_staff": 1, 
+    "last_login": "2008-10-22 08:57:21", 
+    "groups": [], 
+    "user_permissions": [], 
+    "password": "sha1$c7ed3$68db76b162ce6bf60feea29000c8e6e3109bd4a1", 
+    "email": "nick@example.net", 
+    "date_joined": "2007-05-22 23:54:20"
+  }
+}, 
+{
+  "pk": 3, 
+  "model": "auth.user", 
+  "fields": {
+    "username": "ebeezer", 
+    "first_name": "Emma", 
+    "last_name": "Beezer", 
+    "is_active": 1, 
+    "is_superuser": 0, 
+    "is_staff": 0, 
+    "last_login": "2008-11-26 11:11:55", 
+    "groups": [], 
+    "user_permissions": [], 
+    "password": "sha1$cf532$422eff6df006526bd61e50cdca18820d6909dcdb", 
+    "email": "Emma.Beezer@example.net", 
+    "date_joined": "2008-11-26 11:10:55"
+  }
+}
+
+
+]

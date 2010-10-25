@@ -84,7 +84,7 @@ MIDDLEWARE_CLASSES = (
 ROOT_URLCONF = 'snowhite.urls'
 
 INSTALLED_APPS = (
-    # 'ct_framework',
+    'ct_framework',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -95,23 +95,22 @@ INSTALLED_APPS = (
     'django.contrib.redirects',
     'django.contrib.sessions',
     'django.contrib.sites',
-    # 'django_openid_auth',
-    #     'home',
-    #     'ct_groups',
-    #     'ct_template',
-    #     'basic.blog',
-    #     'basic.inlines',
+        'home',
+        'ct_groups',
+        'ct_template',
+        'basic.blog',
+        'basic.inlines',
     #     'contact_form',
     #     'notification',
     #     'photologue',
-    #     'registration',
+        'registration',
     #     'renderform',
-    # 'south',
-    #     'tagging',
+        'south',
+        'tagging',
     #     'wiki',
     #     'pagination',
     #     'timezones',
-    #     'scutils',
+        'scutils',
 
 )
 

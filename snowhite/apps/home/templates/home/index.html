@@ -1,0 +1,106 @@
+{% extends "base.html" %}
+{% load blog markup tagging_tags comments ct_groups_tags %}
+{% block title %}Home{% endblock %}
+
+{% comment %}
+{% endcomment %}
+    
+{% block pre-info %}
+<div class="container-wrapper-preinfo">
+    <div class="openehr-top">
+        <div class="container preinfo">
+            <div class="column span-16 last">
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+                <p> Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.</p>   
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block content-wrapper-class %}bg-content-bot{% endblock %}
+{% block content-class %}openehr-bot{% endblock %}
+
+
+{% block content %}
+
+<div class="column span-14 append-1">
+    <h2>News</h2>
+    {% get_latest_posts 5 as latest_post_list %}
+        {% for post in latest_post_list %}
+        
+            {% if post.ctpost|post_access:user %}
+                {# lets permitted user through even if not public  #}
+                <div class="entry">
+                    <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+                    <div class="entry-descr">
+                        {% get_comment_count for post.ctpost as comment_count %}
+                        <ul>
+                            <li class="entry-author">{{ post.author.get_full_name }}</li>
+                            <li class="entry-date">{{ post.publish|date:"j M Y" }}</li>
+                            <li class="entry-comments"><a href="{{ post.get_absolute_url }}#comments">{{ comment_count }} comment{{ comment_count|pluralize }}</a></li>
+                        </ul>
+                            {% if post.ctpost.ct_group %}
+                            <p>in <a href="{% url group post.ctpost.ct_group.slug %}">{{ post.ctpost.ct_group.name }}</a></p>
+                            {% endif %}
+                    </div>
+                    
+                    {{ post.ctpost.summary|textile }}            
+
+                    <div class="entry-descr">
+                        {% tags_for_object post.ctpost as tag_list %}                          
+                        <ul>
+                            <li class="entry-more"><a href="{{ post.ctpost.get_absolute_url }}">Read more...</a></li>
+                            {% if tag_list %}
+                                <li class="entry-tags">
+                                    <ul class="tags">
+                                        {% for tag in tag_list %}
+                                            <li><a href="{% url tag tag.name %}">{{ tag.name }}</a></li>
+                                        {% endfor %}
+                                    </ul>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+                </div>      
+            {% endif %}
+
+      {% endfor %}
+</div>
+<div class="column span-9 last">
+      {% if user.is_authenticated  %}
+          <div class="box-section head-list">
+              <h2>My groups</h2>
+  
+              {% if user.groupmembership_set.all %}
+                <ol>
+                  {% for o in user.groupmembership_set.all|dictsort:"group_name" %}
+                      <li><a href="/groups/{{ o.group.slug }}/">{{ o.group_name }}</a></li>
+                  {% endfor %}
+                </ol>
+              {% else %}
+                  <p>- none yet -</p>
+              {% endif %}
+              <p><a href="/groups/" class="more">See list of all groups &nbsp;&nbsp;</a><br/>
+              <a href="/contact/" class="more">Interested in starting a group? Contact us</a></p>
+          </div>
+      {% endif %}
+
+    <div class="box-section head-list">
+      <h2>All groups</h2>
+        <ol>
+          {% for o in groups %}
+              {% if o.is_public or o|group_access:user  %}
+                  <li><a href="/groups/{{ o.slug }}/">{{ o.name }}</a></li>
+              {% endif %}
+          {% empty %}
+              <li>No groups found.</li>
+          {% endfor %}
+        </ol>
+    </div>
+      
+</div>
+
+{% endblock %}
+
+            

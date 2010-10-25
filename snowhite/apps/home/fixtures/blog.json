@@ -1,0 +1,54 @@
+[
+{
+  "pk": 2, 
+  "model": "blog.category", 
+  "fields": {
+    "slug": "group-two", 
+    "title": "Community Nursing"
+  }
+}, 
+{
+  "pk": 1, 
+  "model": "blog.category", 
+  "fields": {
+    "slug": "group-one", 
+    "title": "Scottish Community Nursing Census"
+  }
+},
+{
+  "pk": 1, 
+  "model": "blog.post", 
+  "fields": {
+    "body": "Body stuff here. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n", 
+    "status": 2, 
+    "allow_comments": 1, 
+    "author": 1, 
+    "tease": "Tease stuff here. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. ", 
+    "modified": "2008-10-21 02:32:34", 
+    "publish": "2008-10-18 13:12:43", 
+    "created": "2008-10-18 13:12:48", 
+    "categories": [], 
+    "title": "Visit to Cagliari", 
+    "slug": "another-post-here", 
+    "tags": "news"
+  }
+}, 
+{
+  "pk": 2, 
+  "model": "blog.post", 
+  "fields": {
+    "body": "Body lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\r\n\r\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
+    "status": 2, 
+    "allow_comments": 1, 
+    "author": 1, 
+    "tease": "Tease lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ", 
+    "modified": "2008-10-21 03:13:37", 
+    "publish": "2008-10-18 12:58:47", 
+    "created": "2008-10-18 13:10:23", 
+    "categories": [], 
+    "title": "The Project Starts", 
+    "slug": "first-post", 
+    "tags": "community, catalogue"
+  }
+}
+]
