@@ -67,7 +67,7 @@ a:active {
 }
 a.more {
 	padding-right: 13px;
-	background-image: url('icons/more.gif');
+	background-image: url('../icons/more.gif');
 	background-repeat: no-repeat;
 	background-position: 100% 50%;
   font-size: .8em;
@@ -104,7 +104,7 @@ textarea {
 }
 
 #header h1 a {
-  background: transparent url(srwehr.png) no-repeat scroll 0pt 0pt;
+  background: transparent url(../srwehr.png) no-repeat scroll 0pt 0pt;
   bottom: 0px;
   display: block;
   height: 110px;
@@ -124,7 +124,7 @@ textarea {
 }
 .container-wrapper-login {
   width: 100%;
-  background: black url(bg/bg-black-bar.png) repeat-x 0 top;
+  background: black url(../bg/bg-black-bar.png) repeat-x 0 top;
 }
 #login-bar p {
   color: white;
@@ -142,7 +142,7 @@ textarea {
 /* @group preinfo */
 .container-wrapper-preinfo {
   width:  100%;
-  background: #a7c4d1 url(bg/bg-content-top.png) repeat-x 0 bottom;
+  background: #a7c4d1 url(../bg/bg-content-top.png) repeat-x 0 bottom;
 }
 .preinfo {
   padding-top: 1.5em;
@@ -163,14 +163,14 @@ textarea {
 
 /* @group content */
 .bg-content-bot {
-  background: #fff url(bg/bg-content-bot.png) repeat-x 0 top;
+  background: #fff url(../bg/bg-content-bot.png) repeat-x 0 top;
 }
 .bg-content {
-  background: #fff url(bg/bg-content.png) repeat-x 0 top;
+  background: #fff url(../bg/bg-content.png) repeat-x 0 top;
 }
 
 .openehr-bot {
-  background: url(bg/bg-openehr-bot.gif) no-repeat center top;
+  background: url(../bg/bg-openehr-bot.gif) no-repeat center top;
 }
 .content-area, .post-info {
   padding-top: 1em;
@@ -239,7 +239,7 @@ a.action {
   margin-left: 0;
 }
 .head-list li {
-  background: url(icons/round-red.png) no-repeat left center;
+  background: url(../icons/round-red.png) no-repeat left center;
   padding-left: 25px;
 }
 /* @end */
@@ -317,19 +317,19 @@ ul.tags li a:hover { color: rgb(255, 255, 255); background-color: #7c5a18; }
   padding-top: 4px;
 }
 .entry-descr .entry-author {
-  background: url(icons/person.png) no-repeat left center;
+  background: url(../icons/person.png) no-repeat left center;
 }
 .entry-descr .entry-date {
-  background: url(icons/calendar.png) no-repeat left center;
+  background: url(../icons/calendar.png) no-repeat left center;
 }
 .entry-descr .entry-comments {
-  background: url(icons/comments.png) no-repeat left center;
+  background: url(../icons/comments.png) no-repeat left center;
 }
 .entry-descr .entry-more {
-  background: url(icons/read-more.png) no-repeat left center;
+  background: url(../icons/read-more.png) no-repeat left center;
 }
 .entry-descr .entry-tags {
-  background: url(icons/tags.png) no-repeat left center;
+  background: url(../icons/tags.png) no-repeat left center;
 }
 /* @end */
 
@@ -502,7 +502,7 @@ fieldset .hidden {
 /* @group footer */
 .container-wrapper-footer {
   width: 100%;
-  background: black url(bg/bg-black-bar.png) repeat-x 0 top;
+  background: black url(../bg/bg-black-bar.png) repeat-x 0 top;
 }
 
 #footer {
@@ -510,7 +510,7 @@ fieldset .hidden {
   padding-top: 1em;
   padding-bottom: 0;
   text-align: center;
-  /* background: transparent url(bg/foot_bg.jpg) repeat-x;*/
+  /* background: transparent url(../bg/foot_bg.jpg) repeat-x;*/
 }
 #footer p {
   padding-bottom: 1em;

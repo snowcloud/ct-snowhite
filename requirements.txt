@@ -12,7 +12,14 @@
 # -e git+git://github.com/snowcloud/sc-utils.git#egg=sc-utils
 # -e git+git://github.com/snowcloud/django-basic-apps.git#egg=django-basic-apps
 
+-e git+http://github.com/joshuaclayton/blueprint-css.git#egg=blueprint-css
+
+
+
 # TOFIX
+
+# js
+# blueprint
 
 # these should be in their own apps requirements.txt
 # ct-framework
