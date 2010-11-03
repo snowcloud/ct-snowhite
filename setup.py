@@ -1,7 +1,7 @@
 from distutils.core import setup
 
 setup(
-    name='Snowhite- ClinicalTemplates.org example',
+    name='snowhite-clinicaltemplates.org-example',
     version='0.1dev',
     packages=['snowhite'],
     license='Creative Commons Attribution-Noncommercial-Share Alike license',
