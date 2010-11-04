@@ -95,22 +95,20 @@ INSTALLED_APPS = (
     'django.contrib.redirects',
     'django.contrib.sessions',
     'django.contrib.sites',
-        'home',
-        'ct_groups',
-        'ct_template',
-        'basic.blog',
-        'basic.inlines',
-    #     'contact_form',
-    #     'notification',
-    #     'photologue',
-        'registration',
-    #     'renderform',
-        'south',
-        'tagging',
-    #     'wiki',
-    #     'pagination',
-    #     'timezones',
-        'scutils',
+    'home',
+    'ct_groups',
+    'ct_template',
+    'basic.blog',
+    'basic.inlines',
+    'contact_form',
+    'notification',
+    'registration',
+    'renderform',
+    'south',
+    'tagging',
+    'wiki',
+#     'pagination',
+    'scutils',
 
 )
 
@@ -120,6 +118,8 @@ ACCOUNT_ACTIVATION_DAYS = 10 # days
 STATIC_MEDIA_PATH = MEDIA_ROOT
 WIKI_REQUIRES_LOGIN=False
 WIKI_URL_RE='[^/]+'
+
+# SOUTH_MIGRATION_MODULES = {'ct_groups': 'ignore', 'ct_template': 'ignore'}
 
 # override any of the above in your own settings_local.py
 try:
