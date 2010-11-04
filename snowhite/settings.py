@@ -121,6 +121,10 @@ WIKI_URL_RE='[^/]+'
 
 # SOUTH_MIGRATION_MODULES = {'ct_groups': 'ignore', 'ct_template': 'ignore'}
 
+CT_VERSION_SAVES = False
+# CT_VERSIONS = '/var/ctversions/snowhite/'
+# needs a SVN repo set at that path
+
 # override any of the above in your own settings_local.py
 try:
     from settings_local import *
