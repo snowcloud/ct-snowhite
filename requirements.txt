@@ -15,7 +15,7 @@ PIL==1.1.7
 -e git+git://github.com/snowcloud/django-wikiapp.git#egg=django-wikiapp
 -e hg+http://bitbucket.org/ubernostrum/django-contact-form/#egg=django-contact-form
 -e git+git://github.com/jtauber/django-notification.git#egg=django-notification
-svn checkout http://django-renderform.googlecode.com/svn/trunk/ django-renderform-read-only
+# svn checkout http://django-renderform.googlecode.com/svn/trunk/ django-renderform-read-only
 django-renderform
 
 # ct-framework
