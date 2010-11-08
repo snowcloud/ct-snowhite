@@ -119,8 +119,6 @@ STATIC_MEDIA_PATH = MEDIA_ROOT
 WIKI_REQUIRES_LOGIN=False
 WIKI_URL_RE='[^/]+'
 
-# SOUTH_MIGRATION_MODULES = {'ct_groups': 'ignore', 'ct_template': 'ignore'}
-
 CT_VERSION_SAVES = False
 # CT_VERSIONS = '/var/ctversions/snowhite/'
 # needs a SVN repo set at that path
