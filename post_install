@@ -1,4 +1,6 @@
 cd snowhite
+export DJANGO_SETTINGS_MODULE=cstore.settings
+
 ./manage.py loaddata apps/home/fixtures/blog
 ./manage.py loaddata apps/home/fixtures/comments
 ./manage.py loaddata apps/home/fixtures/ct_groups
