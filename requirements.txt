@@ -23,3 +23,4 @@ django-renderform
 -e hg+http://bitbucket.org/ubernostrum/django-registration/#egg=django-registration
 
 # ct-groups
+beautifulsoup
