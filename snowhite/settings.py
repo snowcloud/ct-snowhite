@@ -78,7 +78,7 @@ MIDDLEWARE_CLASSES = (
     "django.middleware.doc.XViewMiddleware",
     # "pagination.middleware.PaginationMiddleware",
     # "django.contrib.redirects.middleware.RedirectFallbackMiddleware",
-    # "django.contrib.flatpages.middleware.FlatpageFallbackMiddleware",
+    "django.contrib.flatpages.middleware.FlatpageFallbackMiddleware",
     # "shared_utils.middleware.Custom403Middleware"
 )
 ROOT_URLCONF = 'snowhite.urls'
