@@ -1,13 +1,13 @@
 cd snowhite
-export DJANGO_SETTINGS_MODULE=cstore.settings
+export DJANGO_SETTINGS_MODULE=snowhite.settings
 
+./manage.py loaddata apps/home/fixtures/users
+./manage.py loaddata apps/home/fixtures/sites
 ./manage.py loaddata apps/home/fixtures/blog
-./manage.py loaddata apps/home/fixtures/comments
 ./manage.py loaddata apps/home/fixtures/ct_groups
 ./manage.py loaddata apps/home/fixtures/ct_template
 ./manage.py loaddata apps/home/fixtures/flatpages
-./manage.py loaddata apps/home/fixtures/sites
-./manage.py loaddata apps/home/fixtures/users
+./manage.py loaddata apps/home/fixtures/comments
 
 cd static/css/
 ln -s ../../../src/ct-template/ct_template/static/css/ct_template.css 
