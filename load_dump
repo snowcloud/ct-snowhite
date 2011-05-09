@@ -1,0 +1,10 @@
+cd snowhite
+export DJANGO_SETTINGS_MODULE=snowhite.settings
+
+for app in contenttypes auth sites blog ct_groups ct_template flatpages comments notification tagging  south tagging wiki
+#for app in comments
+
+do
+	./manage.py loaddata /Users/derek/dev_django/r4c/sql_data/$app.json
+
+done
