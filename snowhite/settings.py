@@ -51,7 +51,6 @@ TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, 'sitetemplates')
 )
 
-ADMIN_MEDIA_PREFIX = '/static/admin/'
 # this doesn't need to be secure...
 SECRET_KEY = 'W03uCcybKXMWUShFRariiEBgEozLaQOLrfkiGZpsRZAtOYvuMv'
 
