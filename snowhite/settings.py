@@ -40,7 +40,12 @@ PROJECT_PATH = os.path.abspath(os.path.split(__file__)[0])
 
 sys.path.insert(0, os.path.join(PROJECT_PATH, "apps"))
 # sys.path.insert(0, os.path.join(PROJECT_PATH, "libs"))
-MEDIA_ROOT = os.path.join(PROJECT_PATH, 'static')
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
+MEDIA_URL = '/media/'
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_PATH, 'static')
+
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, 'sitetemplates')
 )
@@ -95,6 +100,7 @@ INSTALLED_APPS = (
     'django.contrib.redirects',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.staticfiles',
     'home',
     'ct_groups',
     'ct_template',
