@@ -24,6 +24,9 @@
 
 {% block content %}
 
+
+{% comment %}
+
 <div class="column span-14 append-1">
     <h2>News</h2>
     {% get_latest_posts 5 as latest_post_list %}
@@ -100,6 +103,7 @@
     </div>
       
 </div>
+{% endcomment %}
 
 {% endblock %}
 
