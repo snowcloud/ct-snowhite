@@ -1,0 +1,44 @@
+@import "base"
+@import "layout"
+@import "skeleton"
+
+body
+    font: 14px/21px "Lucida Grande","Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif
+	
+.site-header
+    h1
+        margin-top: 60px
+    .line-menu
+        li
+            display: inline
+            float: right
+            padding-left: 1em
+
+.container-wrapper.login
+    background: black url(../bg/bg-black-bar.png) repeat-x 0 top
+    color: white
+    p
+        font-weight: bold
+        margin: 10px 0
+    a
+        color: white
+        
+.container-wrapper-preinfo
+    background: #A7C4D1 url(../bg/bg-content-top.png) repeat-x 0 bottom
+    padding-top: 20px
+    
+.container-wrapper.content
+    background: white url(../bg/bg-content-bot.png) repeat-x 0 top
+
+.content-area
+    background-color: white
+
+/* Mobile/Browser */
+@media only screen and (max-width: 767px)
+    .site-header
+        .line-menu
+            li
+                float: left
+                padding-left: 0
+                padding-right: 1em
+
