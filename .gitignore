@@ -1,3 +1,5 @@
 /snowhite/static/admin/
 /snowhite/static/css/
 /snowhite/static.old
+/src/
+.DS_Store
