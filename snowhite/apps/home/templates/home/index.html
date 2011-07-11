@@ -1,18 +1,18 @@
 {% extends "base.html" %}
-{% load blog markup tagging_tags comments ct_groups_tags i18n %}
+{% load markup tagging_tags comments ct_blog_tags ct_groups_tags i18n %}
 {% block title %}Home{% endblock %}
 
 {% comment %}
+<div class="container-wrapper-preinfo">
+</div>
 {% endcomment %}
     
 {% block pre-info %}
-<div class="container-wrapper-preinfo">
-	<div class="container">
+	<div class="container preinfo">
 		<div class="sixteen columns">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
+            <p>This is the Detailed Clinical Model Content Creator. <a href="/about/">Read more &rarr;</a></p>
         </div>
     </div>
-</div>
 {% endblock %}
 
 {% block content-wrapper-class %}bg-content-bot{% endblock %}
@@ -23,126 +23,83 @@
 
 
     <div class="ten columns alpha">
-        <h2>{% trans "News" %}</h2>
+        <h2>{% trans 'News' %}</h2>
+        {% get_latest_posts 5 as latest_post_list %}
+            {% for post in latest_post_list %}
 
-        <p>xxx</p>
-        <p>xxx</p>
-        <ul class="disc">
-            <li>asdfasd asd asdasda</li>
-            <li>asdfasd asd asdasda</li>
-            <li>asdfasd asd asdasda</li>
-        </ul>
-        <p>xxx</p>
-        <p>xxx</p>
-        <p>xxx</p>
+                {% if post|post_access:user %}
+                    {# lets permitted user through even if not public  #}
+                    <div class="entry">
+                        <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
+                        <div class="entry-descr">
+                            {% get_comment_count for post as comment_count %}
+                            <ul>
+                                <li class="entry-author">{{ post.author.get_full_name }}</li>
+                                <li class="entry-date">{{ post.publish|date:"j M Y" }}</li>
+                                <li class="entry-comments"><a href="{{ post.get_absolute_url }}#comments">{%blocktrans count comment_count as counter%}{{ counter }} comment{%plural%}{{ counter }} comments{%endblocktrans%}</a></li>
+                            </ul>
+                                {% if post.group %}
+                                <p>{% trans 'in' %} <a href="{% url group post.group.slug %}">{{ post.group.name }}</a></p>
+                                {% endif %}
+                        </div>
+
+                        {{ post.summary|textile }}            
+
+                        <div class="entry-descr clearfix">
+                            {% tags_for_object post as tag_list %}                          
+                            <ul>
+                                <li class="entry-more"><a href="{{ post.get_absolute_url }}">{% trans 'Read more' %}...</a></li>
+                                {% if tag_list %}
+                                    <li class="entry-tags">
+                                        <ul class="tags">
+                                            {% for tag in tag_list %}
+                                                <li><a href="{% url tag tag.name %}">{{ tag.name }}</a></li>
+                                            {% endfor %}
+                                        </ul>
+                                    </li>
+                                {% endif %}
+                            </ul>
+                        </div>
+                    </div>      
+                {% endif %}
+
+          {% endfor %}
     </div>
 
     <div class="six columns omega">
-        {% if user.is_authenticated  %}
-            <div class="box-section head-list">
-                <h2>{% trans "My groups" %}</h2>
+          {% if user.is_authenticated  %}
+              <div class="">
+                  <h2>{% trans 'Your groups' %}</h2>
 
-                {% if user.groupmembership_set.all %}
-                  <ol>
-                    {% for o in user.groupmembership_set.all|dictsort:"group_name" %}
-                        <li><a href="/groups/{{ o.group.slug }}/">{{ o.group_name }}</a></li>
-                    {% endfor %}
-                  </ol>
-                {% else %}
-                    <p>- none yet -</p>
-                {% endif %}
-                <p><a href="/groups/" class="more">See list of all groups &nbsp;&nbsp;</a><br/>
-                <a href="/contact/" class="more">Interested in starting a group? Contact us</a></p>
-            </div>
-        {% endif %}
+                  {% if user.groupmembership_set.all %}
+                    <ul class="disc">
+                      {% for o in user.groupmembership_set.all|dictsort:"group_name" %}
+                          <li><a href="/groups/{{ o.group.slug }}/">{{ o.group_name }}</a></li>
+                      {% endfor %}
+                    </ul>
+                  {% else %}
+                      <p>- {% trans 'None yet' %} -</p>
+                  {% endif %}
+                  <p><a href="/groups/" class="more">{% trans 'See list of all groups' %}</a><br/>
+                  <a href="/contact/" class="more">{% trans 'Interested in starting a group? Contact us' %}</a></p>
+              </div>
+          {% endif %}
 
-        <h2>Other Groups</h2>
-
-        <p>xxx</p>
-        <p>xxx</p>
-        <p>xxx</p>
-        <p>xxx</p>
-        <p>xxx</p>
+        <div class="">
+          <h2>{% trans 'All groups' %}</h2>
+            <ul class="disc">
+              {% for o in groups %}
+                  {% if o.is_public or o|group_access:user  %}
+                      <li><a href="/groups/{{ o.slug }}/">{{ o.name }}</a></li>
+                  {% endif %}
+              {% empty %}
+                  <li>{% trans 'No groups found' %}.</li>
+              {% endfor %}
+            </ul>
+        </div>
     </div>
 
 {% comment %}
-
-<div class="column span-14 append-1">
-    <h2>News</h2>
-    {% get_latest_posts 5 as latest_post_list %}
-        {% for post in latest_post_list %}
-        
-            {% if post.ctpost|post_access:user %}
-                {# lets permitted user through even if not public  #}
-                <div class="entry">
-                    <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
-                    <div class="entry-descr">
-                        {% get_comment_count for post.ctpost as comment_count %}
-                        <ul>
-                            <li class="entry-author">{{ post.author.get_full_name }}</li>
-                            <li class="entry-date">{{ post.publish|date:"j M Y" }}</li>
-                            <li class="entry-comments"><a href="{{ post.get_absolute_url }}#comments">{{ comment_count }} comment{{ comment_count|pluralize }}</a></li>
-                        </ul>
-                            {% if post.ctpost.ct_group %}
-                            <p>in <a href="{% url group post.ctpost.ct_group.slug %}">{{ post.ctpost.ct_group.name }}</a></p>
-                            {% endif %}
-                    </div>
-                    
-                    {{ post.ctpost.summary|textile }}            
-
-                    <div class="entry-descr">
-                        {% tags_for_object post.ctpost as tag_list %}                          
-                        <ul>
-                            <li class="entry-more"><a href="{{ post.ctpost.get_absolute_url }}">Read more...</a></li>
-                            {% if tag_list %}
-                                <li class="entry-tags">
-                                    <ul class="tags">
-                                        {% for tag in tag_list %}
-                                            <li><a href="{% url tag tag.name %}">{{ tag.name }}</a></li>
-                                        {% endfor %}
-                                    </ul>
-                                </li>
-                            {% endif %}
-                        </ul>
-                    </div>
-                </div>      
-            {% endif %}
-
-      {% endfor %}
-</div>
-<div class="column span-9 last">
-      {% if user.is_authenticated  %}
-          <div class="box-section head-list">
-              <h2>Your groups</h2>
-  
-              {% if user.groupmembership_set.all %}
-                <ol>
-                  {% for o in user.groupmembership_set.all|dictsort:"group_name" %}
-                      <li><a href="/groups/{{ o.group.slug }}/">{{ o.group_name }}</a></li>
-                  {% endfor %}
-                </ol>
-              {% else %}
-                  <p>- none yet -</p>
-              {% endif %}
-              <p><a href="/groups/" class="more">See list of all groups &nbsp;&nbsp;</a><br/>
-              <a href="/contact/" class="more">Interested in starting a group? Contact us</a></p>
-          </div>
-      {% endif %}
-
-    <div class="box-section head-list">
-      <h2>All groups</h2>
-        <ol>
-          {% for o in groups %}
-              {% if o.is_public or o|group_access:user  %}
-                  <li><a href="/groups/{{ o.slug }}/">{{ o.name }}</a></li>
-              {% endif %}
-          {% empty %}
-              <li>No groups found.</li>
-          {% endfor %}
-        </ol>
-    </div>
-      
-</div>
 {% endcomment %}
 
 {% endblock %}
