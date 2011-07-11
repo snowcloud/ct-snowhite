@@ -1,0 +1,92 @@
+$entryhead: #983932;
+
+/* @group entries */
+
+.entry {
+  padding-bottom: 1em;
+  padding-right: 2.5em;
+}
+.entry h3 {
+  margin-bottom: 0.6em;
+  border-top: 1px solid $entryhead + #8aa;
+  padding-top: 0.5em;
+}
+.entry h3 a {
+  text-decoration: none;
+  border-bottom: 0px solid #fff;
+  color: $entryhead;
+}
+.entry p {
+  margin: 0.5em 0 0.5em 0;
+}
+.entry .more {
+  color: #f58117;
+  font-weight: bold;
+}
+.entry-descr {
+  color: #768495;
+  font-size: 0.9em;
+  padding-bottom: 0.5em;
+  padding-left: 0px;
+}
+/*
+.entry-descrx .sub {
+  color: #768495;
+  font-size: 0.8em;
+  margin-bottom: 0;
+  padding: 0.4em 0;
+  background: url(bg/comment.png) no-repeat left center;
+}
+.entry-descrx .sub a {
+  color: #768495;  
+}
+
+.entry-descrx .inline_tag_list {
+  color: #79748b;
+  font-size: 0.9em;
+}
+*/
+.entry-descr ul {
+  display: inline;
+  margin-left: 0;
+}
+.entry-descr li {
+  display: inline;
+  padding-left: 20px;
+  padding-right: 10px;
+  padding-top: 4px;
+}
+.entry-descr .entry-author {
+  background: url(../icons/person.png) no-repeat left center;
+}
+.entry-descr .entry-date {
+  background: url(../icons/calendar.png) no-repeat left center;
+}
+.entry-descr .entry-comments {
+  background: url(../icons/comments.png) no-repeat left center;
+}
+.entry-descr .entry-more {
+  background: url(../icons/read-more.png) no-repeat left center;
+  float:right;
+}
+.entry-descr .entry-tags {
+  background: url(../icons/tags.png) no-repeat left center;
+}
+/* @end */
+
+
+/* @group tags */
+/*
+h4.tags {
+	display: inline;
+	color: #a25f21;
+	font-size: 90%;
+}*/
+ul.tags { margin: 0pt; display: inline; font-size: 90%; color: rgb(127, 127, 76); list-style-type: none; list-style-image: none; list-style-position: outside;
+}
+ul.tags li { margin: 0pt; padding: 0pt; background: transparent none repeat; display: inline;  }
+ul.tags li + li:before { margin-left: -0.35em; content: ", "; }
+ul.tags li a { border-color: rgb(204, 204, 153); color: #7c5a18; }
+ul.tags li a:hover { color: rgb(255, 255, 255); background-color: #7c5a18; }
+
+/* @end */
