@@ -22,7 +22,7 @@
 ================================================== */
 
 //	.container { position: relative; width: 960px; margin: 0 auto; padding: 0; }
-    .container { min-width: 800px; 
+    .container { //min-width: 800px; 
 	max-width: 1080px; 
 	margin: auto 5%;
 	}
@@ -83,7 +83,7 @@
 	/* Note: Design for a width of 768px */
 
 	@media only screen and (min-width: 768px) and (max-width: 959px) {
-		.container { width: 768px; }
+/*		.container { width: 768px; }
 		.container .column, 
 		.container .columns { margin-left: 10px; margin-right: 10px;  }
 		.column.alpha, .columns.alpha 				{ margin-left: 0; margin-right: 10px; }
@@ -108,9 +108,9 @@
 		
 		.container .one-third.column				{ width: 236px; }
 		.container .two-thirds.column				{ width: 492px; }		
-		
+*/		
 		/* Offsets */	
-		.container .offset-by-one 					{ padding-left: 48px;  }
+/*		.container .offset-by-one 					{ padding-left: 48px;  }
 		.container .offset-by-two 					{ padding-left: 96px; }
 		.container .offset-by-three 				{ padding-left: 144px; }
 		.container .offset-by-four 					{ padding-left: 192px; }
@@ -125,7 +125,7 @@
 		.container .offset-by-thirteen 			{ padding-left: 672px; }
 		.container .offset-by-fourteen 			{ padding-left: 720px; }
 		.container .offset-by-fifteen 			{ padding-left: 900px; }
-	}
+*/	}
 	
 	
 /*	#Mobile (Portrait) 
