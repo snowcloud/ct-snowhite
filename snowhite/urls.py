@@ -56,7 +56,7 @@ urlpatterns = patterns('',
     (r'^accounts/profile/changed/$', 'django.views.generic.simple.direct_to_template', 
         {'template': 'registration/profile_changed.html'}),
 
-    (r'^blog/', include('basic.blog.urls')),
+    (r'^blog/', include('ct_blog.urls')),
     (r'^comments/', include('django.contrib.comments.urls')) ,
     url(r'^contact/$', contact_form, { 'form_class': SCContactForm }, name='contact_form'),
     url(r'^contact/sent/$', direct_to_template, { 'template': 'contact_form/contact_form_sent.html' },
