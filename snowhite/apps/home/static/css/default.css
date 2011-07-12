@@ -349,48 +349,48 @@ label span, legend span { font-weight: normal; color: #444; }
 
 /* Offsets */
 /* line 62, ../../../../compass/src/_skeleton_flexi.scss */
-.container .offset-by-one { padding-left: 60px; }
-
-/* line 63, ../../../../compass/src/_skeleton_flexi.scss */
-.container .offset-by-two { padding-left: 120px; }
+.container .offset-by-one { padding-left: 6.25%; }
 
 /* line 64, ../../../../compass/src/_skeleton_flexi.scss */
-.container .offset-by-three { padding-left: 180px; }
+.container .offset-by-two { padding-left: 120px; }
 
 /* line 65, ../../../../compass/src/_skeleton_flexi.scss */
-.container .offset-by-four { padding-left: 240px; }
+.container .offset-by-three { padding-left: 180px; }
 
 /* line 66, ../../../../compass/src/_skeleton_flexi.scss */
-.container .offset-by-five { padding-left: 300px; }
+.container .offset-by-four { padding-left: 240px; }
 
 /* line 67, ../../../../compass/src/_skeleton_flexi.scss */
-.container .offset-by-six { padding-left: 360px; }
+.container .offset-by-five { padding-left: 300px; }
 
 /* line 68, ../../../../compass/src/_skeleton_flexi.scss */
-.container .offset-by-seven { padding-left: 420px; }
+.container .offset-by-six { padding-left: 360px; }
 
 /* line 69, ../../../../compass/src/_skeleton_flexi.scss */
-.container .offset-by-eight { padding-left: 480px; }
+.container .offset-by-seven { padding-left: 420px; }
 
 /* line 70, ../../../../compass/src/_skeleton_flexi.scss */
-.container .offset-by-nine { padding-left: 540px; }
+.container .offset-by-eight { padding-left: 480px; }
 
 /* line 71, ../../../../compass/src/_skeleton_flexi.scss */
-.container .offset-by-ten { padding-left: 600px; }
+.container .offset-by-nine { padding-left: 540px; }
 
 /* line 72, ../../../../compass/src/_skeleton_flexi.scss */
-.container .offset-by-eleven { padding-left: 660px; }
+.container .offset-by-ten { padding-left: 600px; }
 
 /* line 73, ../../../../compass/src/_skeleton_flexi.scss */
-.container .offset-by-twelve { padding-left: 720px; }
+.container .offset-by-eleven { padding-left: 660px; }
 
 /* line 74, ../../../../compass/src/_skeleton_flexi.scss */
-.container .offset-by-thirteen { padding-left: 780px; }
+.container .offset-by-twelve { padding-left: 720px; }
 
 /* line 75, ../../../../compass/src/_skeleton_flexi.scss */
-.container .offset-by-fourteen { padding-left: 840px; }
+.container .offset-by-thirteen { padding-left: 780px; }
 
 /* line 76, ../../../../compass/src/_skeleton_flexi.scss */
+.container .offset-by-fourteen { padding-left: 840px; }
+
+/* line 77, ../../../../compass/src/_skeleton_flexi.scss */
 .container .offset-by-fifteen { padding-left: 900px; }
 
 /* #Tablet (Portrait)
@@ -403,45 +403,45 @@ label span, legend span { font-weight: normal; color: #444; }
 /*	#Mobile (Portrait) 
 ================================================== */
 /* Note: Design for a width of 320px */
-@media only screen and (max-width: 767px) { /* line 137, ../../../../compass/src/_skeleton_flexi.scss */
+@media only screen and (max-width: 767px) { /* line 138, ../../../../compass/src/_skeleton_flexi.scss */
   .container { width: 300px; }
-  /* line 138, ../../../../compass/src/_skeleton_flexi.scss */
+  /* line 139, ../../../../compass/src/_skeleton_flexi.scss */
   .columns, .column { margin: 0; }
-  /* line 157, ../../../../compass/src/_skeleton_flexi.scss */
+  /* line 158, ../../../../compass/src/_skeleton_flexi.scss */
   .container .one.column, .container .two.columns, .container .three.columns, .container .four.columns, .container .five.columns, .container .six.columns, .container .seven.columns, .container .eight.columns, .container .nine.columns, .container .ten.columns, .container .eleven.columns, .container .twelve.columns, .container .thirteen.columns, .container .fourteen.columns, .container .fifteen.columns, .container .sixteen.columns, .container .one-third.column, .container .two-thirds.column { width: 300px; }
   /* Offsets */
-  /* line 174, ../../../../compass/src/_skeleton_flexi.scss */
+  /* line 175, ../../../../compass/src/_skeleton_flexi.scss */
   .container .offset-by-one, .container .offset-by-two, .container .offset-by-three, .container .offset-by-four, .container .offset-by-five, .container .offset-by-six, .container .offset-by-seven, .container .offset-by-eight, .container .offset-by-nine, .container .offset-by-ten, .container .offset-by-eleven, .container .offset-by-twelve, .container .offset-by-thirteen, .container .offset-by-fourteen, .container .offset-by-fifteen { padding-left: 0; } }
 
 /* #Mobile (Landscape)
 ================================================== */
 /* Note: Design for a width of 480px */
-@media only screen and (min-width: 480px) and (max-width: 767px) { /* line 185, ../../../../compass/src/_skeleton_flexi.scss */
+@media only screen and (min-width: 480px) and (max-width: 767px) { /* line 186, ../../../../compass/src/_skeleton_flexi.scss */
   .container { width: 420px; }
-  /* line 186, ../../../../compass/src/_skeleton_flexi.scss */
+  /* line 187, ../../../../compass/src/_skeleton_flexi.scss */
   .columns, .column { margin: 0; }
-  /* line 205, ../../../../compass/src/_skeleton_flexi.scss */
+  /* line 206, ../../../../compass/src/_skeleton_flexi.scss */
   .container .one.column, .container .two.columns, .container .three.columns, .container .four.columns, .container .five.columns, .container .six.columns, .container .seven.columns, .container .eight.columns, .container .nine.columns, .container .ten.columns, .container .eleven.columns, .container .twelve.columns, .container .thirteen.columns, .container .fourteen.columns, .container .fifteen.columns, .container .sixteen.columns, .container .one-third.column, .container .two-thirds.column { width: 420px; } }
 
 /* #Clearing
 ================================================== */
 /* Self Clearing Goodness */
-/* line 213, ../../../../compass/src/_skeleton_flexi.scss */
+/* line 214, ../../../../compass/src/_skeleton_flexi.scss */
 .container:after { content: "\0020"; display: block; height: 0; clear: both; visibility: hidden; }
 
 /* Use clearfix class on parent to clear nested columns, 
 or wrap each row of columns in a <div class="row"> */
-/* line 220, ../../../../compass/src/_skeleton_flexi.scss */
+/* line 221, ../../../../compass/src/_skeleton_flexi.scss */
 .clearfix:before, .clearfix:after, .row:before, .row:after { content: '\0020'; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
 
-/* line 228, ../../../../compass/src/_skeleton_flexi.scss */
+/* line 229, ../../../../compass/src/_skeleton_flexi.scss */
 .row:after, .clearfix:after { clear: both; }
 
-/* line 231, ../../../../compass/src/_skeleton_flexi.scss */
+/* line 232, ../../../../compass/src/_skeleton_flexi.scss */
 .row, .clearfix { zoom: 1; }
 
 /* You can also use a <br class="clear" /> to clear columns */
-/* line 235, ../../../../compass/src/_skeleton_flexi.scss */
+/* line 236, ../../../../compass/src/_skeleton_flexi.scss */
 .clear { clear: both; display: block; overflow: hidden; visibility: hidden; width: 0; height: 0; }
 
 /* @group entries */
