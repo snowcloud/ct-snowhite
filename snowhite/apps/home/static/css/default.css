@@ -60,22 +60,22 @@ h1, h2, h3, h4, h5, h6 { color: #181818; font-weight: normal; text-shadow: 1px 1
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
 
 /* line 76, ../../../../compass/src/_base.scss */
-h1 { font-size: 2.188em; line-height: 1.069em; margin-bottom: 0.3043em; }
+h1 { font-size: 2.5em; line-height: 1.069em; margin-bottom: 0.3043em; }
 
 /* line 77, ../../../../compass/src/_base.scss */
-h2 { font-size: 1.75em; line-height: 1.069em; margin-bottom: 0.3043em; }
+h2 { font-size: 2em; line-height: 1.069em; margin-bottom: 0.3043em; }
 
 /* line 78, ../../../../compass/src/_base.scss */
-h3 { font-size: 1.313em; line-height: 1.069em; margin-bottom: 0.3043em; }
+h3 { font-size: 1.5em; line-height: 1.069em; margin-bottom: 0.3043em; }
 
 /* line 79, ../../../../compass/src/_base.scss */
-h4 { font-size: 1.063em; line-height: 1.069em; margin-bottom: 0.3043em; }
+h4 { font-size: 1.214em; line-height: 1.069em; margin-bottom: 0.3043em; }
 
 /* line 80, ../../../../compass/src/_base.scss */
-h5 { font-size: 0.875em; line-height: 1.069em; }
+h5 { font-size: 1em; line-height: 1.069em; }
 
 /* line 81, ../../../../compass/src/_base.scss */
-h6 { font-size: 0.813em; line-height: 1.069em; }
+h6 { font-size: 0.929em; line-height: 1.069em; }
 
 /*  h1 { font-size: 46px; line-height: 50px; margin-bottom: 14px;} h2 { font-size: 35px; line-height: 40px; margin-bottom: 10px; } h3 { font-size: 28px; line-height: 34px; margin-bottom: 8px; } h4 { font-size: 21px; line-height: 30px; margin-bottom: 4px; } h5 { font-size: 17px; line-height: 24px; } h6 { font-size: 14px; line-height: 21px; }
 */
@@ -89,7 +89,7 @@ p { margin: 0 0 1.25em 0; }
 p img { margin: 0; }
 
 /* line 93, ../../../../compass/src/_base.scss */
-p.lead { font-size: 1.313em; line-height: 1.2857em; color: #777; }
+p.lead { font-size: 1.5em; line-height: 1.2857em; color: #777; }
 
 /* line 95, ../../../../compass/src/_base.scss */
 em { font-style: italic; }
@@ -518,7 +518,7 @@ ul.tags li a:hover { color: white; background-color: #7c5a18; }
 
 /* @end */
 /* line 9, ../../../../compass/src/default.sass */
-body { font: 100%/140% "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif; background-color: #fafaf0; }
+body { font: 87.5%/140% "Lucida Grande", "Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif; background-color: #fafaf0; }
 
 /* line 13, ../../../../compass/src/default.sass */
 a:link { border-bottom: 1px dotted #68c3ee; color: #343867; text-decoration: none; }
@@ -550,15 +550,13 @@ a.more { font-size: 0.875em; background-image: url(../icons/more.gif); backgroun
 .language form, .language select { margin-bottom: 0; }
 
 /* line 74, ../../../../compass/src/default.sass */
-.preinfo { background-color: #333333; color: white; padding: 2em 1em 1em 1em; margin-bottom: 1em; box-shadow: 1px 1px 2px #555555; -moz-box-shadow: 1px 1px 2px #555555; -webkit-box-shadow: 0px 1px 2px #555555; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
-/* line 77, ../../../../compass/src/default.sass */
-.preinfo a:link, .preinfo a:visited { color: white; }
+.preinfo { background-color: #d4eee5; font-weight: bold; font-size: 1.125em; padding: 2em 1em 1em 1em; margin-bottom: 1em; box-shadow: 1px 2px 2px white; -moz-box-shadow: 1px 2px 2px white; -webkit-box-shadow: 0px 2px 2px white; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
 
-/* line 93, ../../../../compass/src/default.sass */
-.content-area { background-color: white; border: 1px solid #cccccc; margin-bottom: 1em; padding: 1em; box-shadow: 1px 1px 2px #555555; -moz-box-shadow: 1px 1px 2px #555555; -webkit-box-shadow: 0px 1px 2px #555555; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
 /* line 95, ../../../../compass/src/default.sass */
+.content-area { background-color: white; border: 1px solid #cccccc; margin-bottom: 1em; padding: 1em; box-shadow: 1px 1px 2px #555555; -moz-box-shadow: 1px 1px 2px #555555; -webkit-box-shadow: 0px 1px 2px #555555; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
+/* line 97, ../../../../compass/src/default.sass */
 .content-area h1, .content-area h2 { font-family: "omnes-pro"; line-height: 1.875em; color: #555577; }
 
 /* Mobile/Browser */
-@media only screen and (max-width: 767px) { /* line 118, ../../../../compass/src/default.sass */
+@media only screen and (max-width: 767px) { /* line 120, ../../../../compass/src/default.sass */
   .site-header .line-menu li { float: left; padding-left: 0; padding-right: 1em; } }

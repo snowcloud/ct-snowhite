@@ -26,7 +26,7 @@
 	#Forms
 	#Misc */
 
-$fontbase: 16;
+$fontbase: 14;
 
 /* #Reset & Basics (Inspired by E. Meyers)
 ================================================== */
@@ -58,7 +58,7 @@ $fontbase: 16;
 	body { 
 		background: #fff;
 		font: 100%/140% "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
-		color: #444; 
+		color: #444;
 		-webkit-font-smoothing: antialiased; /* Fix for webkit rendering */
         //-webkit-text-size-adjust: none;
  }

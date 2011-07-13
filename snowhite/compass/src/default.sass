@@ -4,10 +4,10 @@
 @import "blog"
 
 $bgbase: #fafaf0
-
+$palegreen: #D4EEE5
 
 body
-    font: 100%/140% "Lucida Grande","Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif
+    font: 87.5%/140% "Lucida Grande","Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif
     background-color: $bgbase
 
 a:link
@@ -30,7 +30,7 @@ a.more
     h1
         font-family: "omnes-pro"
         //64px/96px
-        font-size: 64em / $fontbase 
+        font-size: 56em / $fontbase 
         line-height: 1em
         padding-top: 0.2em
         margin-bottom: 0
@@ -72,17 +72,19 @@ a.more
     //background: #A7C4D1 url(../bg/bg-content-top.png) repeat-x 0 bottom
 
 .preinfo
-    background-color: #333
-    color: white
-    a:link, a:visited
-        color: white
+    background-color: $palegreen
+    font-weight: bold
+    font-size: 1.125em
+    //color: white
+    //a:link, a:visited
+        //color: white
     padding: 2em 1em 1em 1em
     //padding: 2em 0em 1em 0em
     margin-bottom: 1em
     
-    box-shadow: 1px 1px 2px #555
-    -moz-box-shadow: 1px 1px 2px #555
-    -webkit-box-shadow: 0px 1px 2px #555
+    box-shadow: 1px 2px 2px #fff
+    -moz-box-shadow: 1px 2px 2px #fff
+    -webkit-box-shadow: 0px 2px 2px #fff
     border-radius: 3px
     -moz-border-radius: 3px
     -webkit-border-radius: 3px
