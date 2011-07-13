@@ -66,9 +66,9 @@
           {% endfor %}
     </div>
 
-    <div class="five offset-by-one columns omega">
+    <div class="five offset-by-one columns omega secondary">
           {% if user.is_authenticated  %}
-              <div class="">
+              <div class="nav">
                   <h2>{% trans 'Your groups' %}</h2>
 
                   {% if user.groupmembership_set.all %}
@@ -80,12 +80,41 @@
                   {% else %}
                       <p>- {% trans 'None yet' %} -</p>
                   {% endif %}
-                  <p><a href="/groups/" class="more">{% trans 'See list of all groups' %}</a><br/>
-                  <a href="/contact/" class="more">{% trans 'Interested in starting a group? Contact us' %}</a></p>
+                  <div class="footer">
+                  <!-- p><a href="/groups/" class="more">{% trans 'See list of all groups' %}</a></p -->
+                  <p><a href="/contact/" class="more">{% trans 'Interested in starting a group? Contact us' %}</a></p>
+                  </div>
               </div>
-          {% endif %}
+        {% else %}
+        <div class="nav">
+            <h2>{% trans 'Log in' %}</h2>
+            <form class="" method="post" action="accounts/login/?next=/">{% csrf_token %}
+                <fieldset>
+                    <ul>
+                    <li><label for="id_username">Username:</label> <input id="id_username" type="text" maxlength="30" name="username"/></li>
+                    <li><label for="id_password">Password:</label> <input id="id_password" type="password" name="password"/></li>
+                    </ul>
+                </fieldset>
+                <fieldset class="submit">
+                    <input type="submit" value="Log in">
+                    <input type="hidden" name="next" value="{% if next %}{{ next|urlencode }}{% else %}/{% endif %}">
+                </fieldset>
+            </form>
+            
+            <div class="footer">
+                <!-- ul class="disc">
+                    <li><a href="/password_reset/">forgotten user name or password?</a></li>
+                    <li><a href="/accounts/register/">register</a></li>
+                </ul -->
+                <p><a href="/password_reset/" class="more">forgotten user name or password?</a></p>
+                <p><a href="/accounts/register/" class="more">register</a></p>
+            </div>
+            
+        </div>
+        
+        {% endif %}
 
-        <div class="">
+        <div class="nav">
           <h2>{% trans 'All groups' %}</h2>
             <ul class="disc">
               {% for o in groups %}
