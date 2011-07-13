@@ -1,10 +1,20 @@
+$bgbase: #fafaf0
+$palegreen: #D4EEE5
+$darkgreen: #2B7A50
+$paleolive: #E7EED9
+$chestnut: #862924
+$offwhite: #f2f2f2
+
+$bghighlight: $palegreen
+$hdrhighlight: $chestnut
+$navfooter: $offwhite
+
 @import "base"
 //@import "layout"
 @import "skeleton_flexi"
 @import "blog"
+@import "forms"
 
-$bgbase: #fafaf0
-$palegreen: #D4EEE5
 
 body
     font: 87.5%/140% "Lucida Grande","Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif
@@ -62,6 +72,8 @@ a.more
     a
         color: white
     border-bottom: 1px solid #ccc
+.site-footer
+    padding: 1em
 .language
     float: right
     margin-top: 10px
@@ -72,7 +84,7 @@ a.more
     //background: #A7C4D1 url(../bg/bg-content-top.png) repeat-x 0 bottom
 
 .preinfo
-    background-color: $palegreen
+    background-color: $bghighlight
     font-weight: bold
     font-size: 1.125em
     //color: white
@@ -112,7 +124,46 @@ a.more
     -moz-border-radius: 3px
     -webkit-border-radius: 3px
     
+.secondary
+    .nav
+        h2
+            background-color: $hdrhighlight
+            color: white
+            padding-left: 1px * $fontbase
+        p, ul
+            padding-left: .75px * $fontbase
+            padding-top: 0.75em
+        .footer
+            background-color: $navfooter
+            border-top: 1px solid white
+            p
+                padding: 0 
+                margin: 0
+            padding: 0.25em  1em 0.5em 1em
+                
+        border: 1px solid #ccc
+        background-color: $paleolive
+        //padding: 0 1em 0.75em 1em
+        margin-bottom: 1.5em
+        box-shadow: 0px 1px 1px #555
+        -moz-box-shadow: 0px 1px 1px #555
+        -webkit-box-shadow: 0px 1px 1px #555
+        border-radius: 3px
+        -moz-border-radius: 3px
+        -webkit-border-radius: 3px
+    form
+        margin-bottom: 0
+    fieldset.submit
+        padding-left: .75px * $fontbase
+        margin-bottom: 0
+    input[type="text"], 
+    input[type="password"],
+    input[type="email"],
+    textarea, 
+    select
+        width: 90%
 
+        
 /* Mobile/Browser */
 @media only screen and (max-width: 767px)
     .site-header
