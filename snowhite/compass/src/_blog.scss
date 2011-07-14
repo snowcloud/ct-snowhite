@@ -90,3 +90,25 @@ ul.tags li a { border-color: rgb(204, 204, 153); color: #7c5a18; }
 ul.tags li a:hover { color: rgb(255, 255, 255); background-color: #7c5a18; }
 
 /* @end */
+
+
+/* @group comments */
+
+.commententry {
+  padding: 1em;
+/*  width: 766px;*/
+}
+
+.commententry.row1 {
+  background-color: #dadada;
+}
+.commententry.row2 {
+  background-color: #f4f8f0;
+}
+.commententry h5 {
+  color: #00133e;
+  border-bottom: 1px solid #bdbdbd;
+  margin-bottom: 1em;
+}
+
+/* @end */

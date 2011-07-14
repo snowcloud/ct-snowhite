@@ -69,7 +69,6 @@ $fontbase: 14;
  		color: #181818; 
  		//font-family: "Georgia", "Times New Roman", Helvetica, Arial, sans-serif;
  		font-weight: normal;
- 		text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
  		 }
 
  	h1 a, h2 a, h3 a, h4 a, h5 a, h6 a { font-weight: inherit; }
@@ -324,7 +323,7 @@ $fontbase: 14;
 		margin-left: -0.825em;
 		  }
 	label { 
-		display: block;
+/*      display: block;*/
 		font-weight: bold;
 		font-size: 0.875em;  }
 	select { 
