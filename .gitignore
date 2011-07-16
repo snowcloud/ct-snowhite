@@ -3,3 +3,6 @@
 /snowhite/static.old
 /src/
 .DS_Store
+/bin/
+/include/
+/lib/
