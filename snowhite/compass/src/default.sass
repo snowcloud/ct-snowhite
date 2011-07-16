@@ -8,11 +8,16 @@ $offwhite: #f2f2f2
 $bghighlight: $palegreen
 $hdrhighlight: $chestnut
 $navfooter: $offwhite
+$bgthead: $chestnut
+$colorthead: white
+$rowodd: $paleolive
 
+@import "mixins"
 @import "base"
 //@import "layout"
 @import "skeleton_flexi"
 @import "blog"
+@import "group"
 @import "forms"
 
 
@@ -127,13 +132,7 @@ a.more
     //border-bottom: 2px solid #bbb
     margin-bottom: 1em
     padding: 1em
-
-    box-shadow: 1px 1px 2px #555
-    -moz-box-shadow: 1px 1px 2px #555
-    -webkit-box-shadow: 0px 1px 2px #555
-    border-radius: 3px
-    -moz-border-radius: 3px
-    -webkit-border-radius: 3px
+    @include box(#555)
     
 .secondary
     .nav
@@ -156,12 +155,7 @@ a.more
         background-color: $paleolive
         //padding: 0 1em 0.75em 1em
         margin-bottom: 1.5em
-        box-shadow: 0px 1px 1px #555
-        -moz-box-shadow: 0px 1px 1px #555
-        -webkit-box-shadow: 0px 1px 1px #555
-        border-radius: 3px
-        -moz-border-radius: 3px
-        -webkit-border-radius: 3px
+        @include box(#555)
     form
         margin-bottom: 0
     fieldset.submit
@@ -173,7 +167,8 @@ a.more
     textarea, 
     select
         width: 90%
-
+    ul.top
+        font-weight: bold
         
 /* Mobile/Browser */
 @media only screen and (max-width: 767px)
