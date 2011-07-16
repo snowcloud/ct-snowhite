@@ -97,10 +97,10 @@ urlpatterns += patterns('',
 )
 
 
-# if settings.DEBUG:
-#     urlpatterns += patterns('',
-#         (r'^static/(.*)$', 'django.views.static.serve', {'document_root': os_path.join(settings.PROJECT_PATH, 'static')}),
-#     )
-#     urlpatterns += patterns('',
-#        (r'', include('wiki.static_urls')), # static files, testing only
-#     )
+if settings.DEBUG:
+    urlpatterns += patterns('',
+        (r'^media/(.*)$', 'django.views.static.serve', {'document_root': os_path.join(settings.PROJECT_PATH, 'media')}),
+    )
+    urlpatterns += patterns('',
+       (r'', include('wiki.static_urls')), # static files, testing only
+    )
