@@ -3,9 +3,16 @@
 /snowhite/static.old
 /src/
 .DS_Store
+<<<<<<< HEAD
+/sql_data/
+=======
 /bin/
 /include/
 /lib/
+<<<<<<< HEAD
 /snowhite/settings_local.py
 *.pyc
 /snowhite/compass/.sass-cache/
+=======
+>>>>>>> 6cc430f5b94f1b74e0b52fd8d851d05d1a123c30
+>>>>>>> 1a413126f3b5af3cd0bb49d379773084039d8b65
