@@ -137,7 +137,7 @@ ul.circle { list-style: circle outside; }
 ul.disc { list-style: disc outside; }
 
 /* line 120, ../../../../compass/src/_base.scss */
-ul.no-bullet, ol.no-bullet { list-style: none outside; margin-left: 0; }
+ul.no-bullet, ol.no-bullet { list-style: none outside; margin-left: 0; padding-left: 0 !important; }
 
 /* line 121, ../../../../compass/src/_base.scss */
 form ol { list-style: none outside; }
@@ -667,22 +667,22 @@ a.more { font-size: 0.875em; background-image: url(../icons/more.gif); backgroun
 /* line 138, ../../../../compass/src/default.sass */
 .secondary .nav { border: 1px solid #cccccc; background-color: #e7eed9; margin-bottom: 1.5em; box-shadow: 1px 1px 2px #555555; -moz-box-shadow: 1px 1px 2px #555555; -webkit-box-shadow: 0px 1px 2px #555555; border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px; }
 /* line 139, ../../../../compass/src/default.sass */
-.secondary .nav h2 { background-color: #862924; color: white; padding-left: 14px; }
-/* line 143, ../../../../compass/src/default.sass */
+.secondary .nav h2 { background-color: #862924; color: white; padding-left: 14px; margin: 0; }
+/* line 144, ../../../../compass/src/default.sass */
 .secondary .nav p, .secondary .nav ul { padding-left: 10.5px; padding-top: 0.75em; }
-/* line 146, ../../../../compass/src/default.sass */
+/* line 147, ../../../../compass/src/default.sass */
 .secondary .nav .footer { background-color: #f2f2f2; border-top: 1px solid white; padding: 0.25em 1em 0.5em 1em; }
-/* line 149, ../../../../compass/src/default.sass */
+/* line 150, ../../../../compass/src/default.sass */
 .secondary .nav .footer p { padding: 0; margin: 0; }
-/* line 159, ../../../../compass/src/default.sass */
+/* line 160, ../../../../compass/src/default.sass */
 .secondary form { margin-bottom: 0; }
-/* line 161, ../../../../compass/src/default.sass */
+/* line 162, ../../../../compass/src/default.sass */
 .secondary fieldset.submit { padding-left: 10.5px; margin-bottom: 0; }
-/* line 164, ../../../../compass/src/default.sass */
+/* line 165, ../../../../compass/src/default.sass */
 .secondary input[type="text"], .secondary input[type="password"], .secondary input[type="email"], .secondary textarea, .secondary select { width: 90%; }
-/* line 170, ../../../../compass/src/default.sass */
+/* line 171, ../../../../compass/src/default.sass */
 .secondary ul.top { font-weight: bold; }
 
 /* Mobile/Browser */
-@media only screen and (max-width: 767px) { /* line 177, ../../../../compass/src/default.sass */
+@media only screen and (max-width: 767px) { /* line 178, ../../../../compass/src/default.sass */
   .site-header .line-menu li { float: left; padding-left: 0; padding-right: 1em; } }

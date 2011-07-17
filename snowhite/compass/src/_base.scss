@@ -117,7 +117,7 @@ $fontbase: 14;
 	ul.square { list-style: square outside; }
 	ul.circle { list-style: circle outside; }
 	ul.disc { list-style: disc outside; }
-	ul.no-bullet, ol.no-bullet { list-style: none outside; margin-left: 0;}
+	ul.no-bullet, ol.no-bullet { list-style: none outside; margin-left: 0; padding-left: 0 !important;}
 	form ol { list-style: none outside; }
 	ul ul, ul ol,
 	ol ol, ol ul { margin: 0.25em 0 0.3125em 1.875em; font-size: 90%;  }
