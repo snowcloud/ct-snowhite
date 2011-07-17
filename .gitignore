@@ -6,3 +6,6 @@
 /bin/
 /include/
 /lib/
+/snowhite/settings_local.py
+*.pyc
+/snowhite/compass/.sass-cache/
