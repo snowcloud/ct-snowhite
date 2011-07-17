@@ -3,4 +3,10 @@
 /snowhite/static.old
 /src/
 .DS_Store
+<<<<<<< HEAD
 /sql_data/
+=======
+/bin/
+/include/
+/lib/
+>>>>>>> 6cc430f5b94f1b74e0b52fd8d851d05d1a123c30
