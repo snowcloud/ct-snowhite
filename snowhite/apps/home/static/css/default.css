@@ -137,10 +137,10 @@ ul.circle { list-style: circle outside; }
 ul.disc { list-style: disc outside; }
 
 /* line 120, ../../../../compass/src/_base.scss */
-ul.no-bullet, ol.no-bullet { list-style: none outside; margin-left: 0; padding-left: 0 !important; }
+ul.no-bullet, ol.no-bullet { list-style: none outside; margin-left: 0; }
 
 /* line 121, ../../../../compass/src/_base.scss */
-form ol { list-style: none outside; }
+form ol, form ul { list-style: none outside; margin-left: 0; padding-left: 0 !important; }
 
 /* line 123, ../../../../compass/src/_base.scss */
 ul ul, ul ol, ol ol, ol ul { margin: 0.25em 0 0.3125em 1.875em; font-size: 90%; }
@@ -677,12 +677,14 @@ a.more { font-size: 0.875em; background-image: url(../icons/more.gif); backgroun
 /* line 160, ../../../../compass/src/default.sass */
 .secondary form { margin-bottom: 0; }
 /* line 162, ../../../../compass/src/default.sass */
-.secondary fieldset.submit { padding-left: 10.5px; margin-bottom: 0; }
-/* line 165, ../../../../compass/src/default.sass */
+.secondary fieldset { padding: 0 0 0.1em 1em; }
+/* line 164, ../../../../compass/src/default.sass */
+.secondary fieldset.submit { padding-left: 1em; padding-top: 0.5em; margin-bottom: 0; }
+/* line 168, ../../../../compass/src/default.sass */
 .secondary input[type="text"], .secondary input[type="password"], .secondary input[type="email"], .secondary textarea, .secondary select { width: 90%; }
-/* line 171, ../../../../compass/src/default.sass */
+/* line 174, ../../../../compass/src/default.sass */
 .secondary ul.top { font-weight: bold; }
 
 /* Mobile/Browser */
-@media only screen and (max-width: 767px) { /* line 178, ../../../../compass/src/default.sass */
+@media only screen and (max-width: 767px) { /* line 181, ../../../../compass/src/default.sass */
   .site-header .line-menu li { float: left; padding-left: 0; padding-right: 1em; } }
