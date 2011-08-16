@@ -90,7 +90,25 @@
     		<div class="sixteen columns alpha clearfix breadcrumbs">
     		    {% block breadcrumbs %}{% endblock %}
         	</div>
-    		<!-- div class="sixteen columns clearfix"></div -->
+      		<div class="sixteen columns clearfix">
+
+              <div class="usermessage">
+                  <ul> 
+                          <li class="success">Message here.</li>
+                          <li class="warn">Message here.</li>
+                  </ul>
+                </div>
+
+              {% if messages %}
+                <div class="usermessage">
+                  <ul> 
+                      {% for message in messages %} 
+                          <li class="{{ message.tags }}">{{ message|safe }}</li>
+                      {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+            </div>
     		    {% block content %}{% endblock %}
         	
     	</div>
