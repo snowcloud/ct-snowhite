@@ -11,3 +11,4 @@
 *.pyc
 /snowhite/compass/.sass-cache/
 /snowhite/media/groups/*
+/snowhite/snowhitedb
