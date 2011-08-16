@@ -1,0 +1,8 @@
+*.pyc
+/snowhite/settings_local.py
+/snowhite/snowhitedb
+/bin/
+/include/
+/lib/
+/sql_data/
+/src/
