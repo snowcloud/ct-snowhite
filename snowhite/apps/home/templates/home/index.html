@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load blog markup tagging_tags comments ct_groups_tags %}
+{% load markup tagging_tags comments ct_groups_tags ct_blog_tags %}
 {% block title %}Home{% endblock %}
 
 {% comment %}
@@ -29,28 +29,28 @@
     {% get_latest_posts 5 as latest_post_list %}
         {% for post in latest_post_list %}
         
-            {% if post.ctpost|post_access:user %}
+            {% if post|post_access:user %}
                 {# lets permitted user through even if not public  #}
                 <div class="entry">
                     <h3><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h3>
                     <div class="entry-descr">
-                        {% get_comment_count for post.ctpost as comment_count %}
+                        {% get_comment_count for post as comment_count %}
                         <ul>
                             <li class="entry-author">{{ post.author.get_full_name }}</li>
                             <li class="entry-date">{{ post.publish|date:"j M Y" }}</li>
                             <li class="entry-comments"><a href="{{ post.get_absolute_url }}#comments">{{ comment_count }} comment{{ comment_count|pluralize }}</a></li>
                         </ul>
-                            {% if post.ctpost.ct_group %}
-                            <p>in <a href="{% url group post.ctpost.ct_group.slug %}">{{ post.ctpost.ct_group.name }}</a></p>
+                            {% if post.group %}
+                            <p>in <a href="{% url group post.group.slug %}">{{ post.group.name }}</a></p>
                             {% endif %}
                     </div>
                     
-                    {{ post.ctpost.summary|textile }}            
+                    {{ post.summary|textile }}            
 
                     <div class="entry-descr">
-                        {% tags_for_object post.ctpost as tag_list %}                          
+                        {% tags_for_object post as tag_list %}                          
                         <ul>
-                            <li class="entry-more"><a href="{{ post.ctpost.get_absolute_url }}">Read more...</a></li>
+                            <li class="entry-more"><a href="{{ post.get_absolute_url }}">Read more...</a></li>
                             {% if tag_list %}
                                 <li class="entry-tags">
                                     <ul class="tags">

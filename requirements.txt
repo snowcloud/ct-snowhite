@@ -9,6 +9,7 @@ psycopg2
 
 -e git+git://github.com/snowcloud/ct-framework.git#egg=ct-framework
 -e git+git://github.com/snowcloud/ct-groups.git#egg=ct-groups
+-e git+git://github.com/snowcloud/ct-blog.git#egg=ct-blog
 -e git+git://github.com/snowcloud/ct-template.git#egg=ct-template
 -e git+git://github.com/snowcloud/sc-utils.git#egg=sc-utils
 -e git+git://github.com/snowcloud/django-basic-apps.git#egg=django-basic-apps
