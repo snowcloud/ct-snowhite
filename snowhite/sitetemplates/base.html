@@ -11,12 +11,6 @@
 	<title>Snowhite: {% block title %}{% endblock %}</title>
 	<meta name="description" content="">
 	<meta name="author" content="SnowCloud.co.uk">
-	<!--[if lt IE 9]>
-		<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	
-	<script type="text/javascript" src="http://use.typekit.com/mmc1wbc.js"></script>
-    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 
 	<!-- Mobile Specific Metas
   ================================================== -->
@@ -25,7 +19,8 @@
 	<!-- CSS
   ================================================== -->
 	<link rel="stylesheet" href="/static/css/default.css">
-	
+  {% block stylesheet_extra %}{% endblock %}
+
 	<!-- Favicons
 	================================================== -->
 	<link rel="shortcut icon" href="/static/images/favicon.ico">
@@ -33,7 +28,9 @@
 	<link rel="apple-touch-icon" sizes="72x72" href="/static/images/apple-touch-icon-72x72.png" />
 	<link rel="apple-touch-icon" sizes="114x114" href="/static/images/apple-touch-icon-114x114.png" />
 
-    {% block head_extra %}{% endblock %}
+  <script type="text/javascript" src="http://use.typekit.com/mmc1wbc.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 </head>
 <body>
 
@@ -66,21 +63,23 @@
         	</div>
     	</div>
     </div>
-	<div class="container site-header">
-		<div class="eight columns">
-			<h1>Snowhite</h1>
-			<p>A playground for the ClinicalTemplates.org web framework.</p>
-		</div>
-		<div class="eight columns omega line-menu">
-		      <ul>
-              {% if user.is_staff %}<li><a href="/admin/">{% trans "Admin" %}</a></li>{% endif %}
-              <li><a href="{% site_base %}about/">{% trans "About" %}</a></li>
-              <li><a href="{% site_base %}contact/">{% trans "Contact" %}</a></li>
-              <li><a href="{% site_base %}tags/">{% trans "Topics" %}</a></li>
-              <li><a href="{% site_base %}groups/">{% trans "Groups" %}</a></li>
-              <li><a href="{% site_base %}">{% trans "Home" %}</a></li>
-		      </ul>
-		</div>
+	<div class="container-wrapper site-header">
+    	<div class="container">
+    		<div class="eight columns alpha">
+    			<h1>Snowhite</h1>
+    			<p>A playground for the ClinicalTemplates.org web framework.</p>
+    		</div>
+    		<div class="eight columns omega line-menu">
+    		      <ul>
+                  {% if user.is_staff %}<li><a href="/admin/">{% trans "Admin" %}</a></li>{% endif %}
+                  <li><a href="{% site_base %}about/">{% trans "About" %}</a></li>
+                  <li><a href="{% site_base %}contact/">{% trans "Contact" %}</a></li>
+                  <li><a href="{% site_base %}tags/">{% trans "Topics" %}</a></li>
+                  <li><a href="{% site_base %}groups/">{% trans "Groups" %}</a></li>
+                  <li><a href="{% site_base %}">{% trans "Home" %}</a></li>
+    		      </ul>
+    		</div>
+    	</div>
 	</div>
     
     
@@ -88,41 +87,45 @@
 
 	<div class="container-wrapper content">
     	<div class="container content-area">
-    		<div class="sixteen columns clearfix breadcrumbs">
+    		<div class="sixteen columns alpha clearfix breadcrumbs">
     		    {% block breadcrumbs %}{% endblock %}
         	</div>
-    		<div class="sixteen columns clearfix">
+    		<!-- div class="sixteen columns clearfix"></div -->
     		    {% block content %}{% endblock %}
-        	</div>
+        	
     	</div>
     </div>
 
-	<div class="container site-footer">
-		<div class="sixteen columns">
-			<p>A playground for the ClinicalTemplates.org web framework.</p>
-		</div>
-	</div>
+	<div class="container-wrapper site-footer">
+    	<div class="container">
+    		<div class="sixteen columns">
+    			<p>A playground for the ClinicalTemplates.org web framework.</p>
+    		</div>
+    	</div>
+    </div>
 
-
-
-{% comment %}
-
-{% endcomment %}
-
-		
-		
 		
 	<!-- JS
 	================================================== -->
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.js"></script>
 	<script>window.jQuery || document.write("<script src='/static/js/jquery-1.5.1.min.js'>\x3C/script>")</script>
-	<script src="/static/js/app.js"></script>
+
+  {% block js-extra %}{% endblock %}
+
+	<!-- script src="/static/js/app.js"></script -->
     <script type="text/javascript">
         $(document).ready(function() {
-            $('#langsubmit').hide();
-            $('#langchange').change(function() {
-    			$('#setlang').submit();
-    		});
+          $('#langsubmit').hide();
+          $('#langchange').change(function() {
+            $('#setlang').submit();
+      		});
+          {% block js-document-ready %}{% endblock %}
         })
     </script>
 	

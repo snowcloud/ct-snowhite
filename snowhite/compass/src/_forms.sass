@@ -1,6 +1,9 @@
 
 //form
 //    padding: 1em 0 0 1em
+.inline
+    display: inline
+
 fieldset
     background-color: $palegreen
     padding: 1em
@@ -37,3 +40,21 @@ ul.errorlist, ul.errors
         padding: 0.5em
         margin-rightx: 1em
         list-style-type: none
+
+/* from Natbat buttons as links: http://natbat.net/2009/Jun/10/styling-buttons-as-links/ */
+button.link
+    font-size: 1em
+    text-align: left
+    color: #d12f19
+    background: none
+    margin: 0
+    padding: 0
+    border: none
+    cursor: pointer
+
+    span
+        text-decoration: underline
+
+button.link:hover, button.link:focus
+    span
+        color: black

@@ -38,26 +38,80 @@
 	.column.omega, .columns.omega 				{ margin-right: 0; }
 	
 	/* Base Grid */
-	.container .one.column 							{ width: 5%; }
-	.container .two.columns 						{ width: 11.25%; }
-	.container .three.columns 					    { width: 17.5%; }
-	.container .four.columns 						{ width: 23.75%; }
-	.container .five.columns 						{ width: 30%; }
-	.container .six.columns 						{ width: 36.25%; }
-	.container .seven.columns 					{ width: 42.5%; }
-	.container .eight.columns 					{ width: 48.75%; }
-	.container .nine.columns 					{ width: 55%; }
-	.container .ten.columns 					{ width: 61.25%; }	
-	.container .eleven.columns 					{ width: 67.5%; }
-	.container .twelve.columns 					{ width: 73.75%; }
-	.container .thirteen.columns 				{ width: 80%; }
-	.container .fourteen.columns 				{ width: 86.25%; }
-	.container .fifteen.columns 				{ width: 92.5%; }
-	.container .sixteen.columns 				{ width: 98.75%; }
-	
-	.container .one-third.column				{ width: 300px; }
-	.container .two-thirds.column				{ width: 620px; }
-	
+  .container .one.column                          { width: 5%; }
+    .container .two.columns                         { width: 11.25%; }
+    .container .three.columns                       { width: 17.5%; }
+    .container .four.columns                        { width: 23.75%; }
+    .container .five.columns                        { width: 30%; }
+    .container .six.columns                         { width: 36.25%; }
+    .container .seven.columns                   { width: 42.5%; }
+    .container .eight.columns                   { width: 48.75%; }
+    .container .nine.columns                    { width: 55%; }
+    .container .ten.columns                     { width: 61.25%; }  
+    .container .eleven.columns                  { width: 67.5%; }
+    .container .twelve.columns                  { width: 73.75%; }
+    .container .thirteen.columns                { width: 80%; }
+    .container .fourteen.columns                { width: 86.25%; }
+    .container .fifteen.columns                 { width: 92.5%; }
+    .container .sixteen.columns                 { width: 98.75%; }
+    
+/*    .container .one-third.column                { width: 300px; }
+    .container .two-thirds.column               { width: 620px; }
+	.container .one.column 						{ width: 6.328125%; }
+	.container .two.columns 					{ width: 12.65625%; }
+	.container .three.columns 					{ width: 18.984375%; }
+	.container .four.columns 					{ width: 25.3125%; }
+	.container .five.columns 					{ width: 31.25%; }
+	.container .six.columns 					{ width: 37.96875%; }
+	.container .seven.columns 					{ width: 44.296875%; }
+	.container .eight.columns 					{ width: 50%; }
+	.container .nine.columns 					{ width: 56.953125%; }
+	.container .ten.columns 					{ width: 62.5%; }
+	.container .eleven.columns 					{ width: 69.609375%; }
+	.container .twelve.columns 					{ width: 75.9375%; }
+	.container .thirteen.columns 				{ width: 82.265625%; }
+	.container .fourteen.columns 				{ width: 88.59375%; }
+	.container .fifteen.columns 				{ width: 94.921875%; }
+	.container .sixteen.columns 				{ width: 100%; }
+
+*/
+
+
+/*
+5
+11.25
+17.5
+23.75
+30
+36.25
+42.5
+48.75
+55
+61.25
+67.5
+73.75
+80
+86.25
+92.5
+98.75
+
+6.25
+12.5
+18.75
+25
+31.25
+37.5
+43.75
+50
+56.25
+62.5
+68.75
+75
+81.25
+87.5
+93.75
+100
+*/
 	/* Offsets */	
 	.container .offset-by-one 					{ padding-left: 6.25%;  }
 	

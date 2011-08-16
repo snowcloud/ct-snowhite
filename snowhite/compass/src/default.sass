@@ -1,16 +1,18 @@
-$bgbase: #fafaf0
+$eggshell: #fafaf0
 $palegreen: #D4EEE5
 $darkgreen: #2B7A50
 $paleolive: #E7EED9
 $chestnut: #862924
 $offwhite: #f2f2f2
 
-$bghighlight: $palegreen
-$hdrhighlight: $chestnut
+$bgbase: white
+$bghighlight: $offwhite
+$hdrhighlight: $offwhite
 $navfooter: $offwhite
-$bgthead: $chestnut
+$bgthead: #777
 $colorthead: white
-$rowodd: $paleolive
+$rowbg: #f8f8f8
+$rowodd: #eee
 
 @import "mixins"
 @import "base"
@@ -43,7 +45,7 @@ a.more
     
 .site-header
     h1
-        font-family: "omnes-pro"
+        font-family: "deva-ideal"
         //64px/96px
         font-size: 56em / $fontbase 
         line-height: 1em
@@ -51,13 +53,16 @@ a.more
         margin-bottom: 0
         color: #557
     p
-        font-family: "omnes-pro"
+        font-family: "deva-ideal"
         font-size: 1em
         //margin-top: -2.6em
         //margin-left: 22em
-    background-color: $bgbase
+    background-color: $eggshell
     padding-top: 1.5em 0 1.2em 0
     //padding-bottom: 1.3em
+    // border: 1px solid #ccc
+    border-bottom: 3px solid #ccc
+
     .line-menu
         li
             display: inline
@@ -97,6 +102,7 @@ a.more
         //color: white
     padding: 2em 1em 1em 1em
     //padding: 2em 0em 1em 0em
+    margin-top: 1em
     margin-bottom: 1em
     
     box-shadow: 1px 2px 2px #fff
@@ -112,51 +118,56 @@ a.more
 .breadcrumbs
     p
         font-size: 0.875em
+        margin-left: 0
         //background-color: red
         //padding: 1em
         
 .content-area
-    background-color: white
+    //background-color: white
     h1, h2
         //font: 36px/48px "omnes-pro"
-        font-family: "omnes-pro"
+        font-family: "deva-ideal"
         //font-size: 28em / $fontbase 
-        color: #557
-        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
     h1
+        //color: #557
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
         line-height: 1.55em
     h2
+        //color: #99a
         line-height: 1.875em
     
-    border: 1px solid #ccc
+    //border: 1px solid #ccc
     //border-bottom: 2px solid #bbb
     margin-bottom: 1em
-    padding: 1em
-    @include box(#555)
+    padding: 1em 0
+    //@include box(#555)
     
 .secondary
     .nav
         h2
-            background-color: $hdrhighlight
-            color: white
+            //background-color: $hdrhighlight
+            color: black
+            //font-size: 21em / $fontbase
             padding-left: 1px * $fontbase
             margin: 0
         p, ul
-            padding-left: .75px * $fontbase
+            padding-left: 1px * $fontbase
             padding-top: 0.75em
+            margin-bottom: 1.5em
         .footer
-            background-color: $navfooter
+            //background-color: $navfooter
             border-top: 1px solid white
             p
-                padding: 0 
+                padding: 0.3em 0 
                 margin: 0
             padding: 0.25em  1em 0.5em 1em
                 
-        border: 1px solid #ccc
-        background-color: $paleolive
+        border-bottom: 1px solid #ccc
+        background-color: white
         //padding: 0 1em 0.75em 1em
+        //padding-bottom: 0.75em
         margin-bottom: 1.5em
-        @include box(#555)
+        //@include box(#555)
     form
         margin-bottom: 0
     fieldset
