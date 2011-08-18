@@ -10,7 +10,7 @@
 {% block pre-info %}
 	<div class="container preinfo">
 		<div class="sixteen columns">
-            <p>This is the Detailed Clinical Model Content Creator. <a href="/about/">Read more &rarr;</a></p>
+            <p>This is the Detailed Clinical Model Content Creator. <a href="/about/{{LANGUAGE_CODE}}/">Read more &rarr;</a></p>
         </div>
     </div>
 {% endblock %}
@@ -80,10 +80,6 @@
                   {% else %}
                       <p>- {% trans 'None yet' %} -</p>
                   {% endif %}
-                  <div class="footer">
-                  <!-- p><a href="/groups/" class="more">{% trans 'See list of all groups' %}</a></p -->
-                  <p><a href="/contact/" class="more">{% trans 'Interested in starting a group? Contact us' %}</a></p>
-                  </div>
               </div>
         {% else %}
         <div class="nav">
@@ -106,8 +102,8 @@
                     <li><a href="/password_reset/">forgotten user name or password?</a></li>
                     <li><a href="/accounts/register/">register</a></li>
                 </ul -->
-                <p><a href="/password_reset/" class="more">forgotten user name or password?</a></p>
-                <p><a href="/accounts/register/" class="more">register</a></p>
+                <p><a href="/password_reset/" class="action mail">forgotten user name or password?</a></p>
+                <p><a href="/accounts/register/" class="action edit">register</a></p>
             </div>
             
         </div>
@@ -125,6 +121,10 @@
                   <li>{% trans 'No groups found' %}.</li>
               {% endfor %}
             </ul>
+            <div class="footer">
+              <!-- p><a href="/groups/" class="more">{% trans 'See list of all groups' %}</a></p -->
+              <p><a href="/contact/" class="action mail">{% trans 'Interested in starting a group?' %}</a></p>
+            </div>
         </div>
     </div>
 

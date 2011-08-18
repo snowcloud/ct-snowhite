@@ -4,6 +4,7 @@ $darkgreen: #2B7A50
 $paleolive: #E7EED9
 $chestnut: #862924
 $offwhite: #f2f2f2
+$darkgrey: #444444
 
 $bgbase: white
 $bghighlight: $offwhite
@@ -34,18 +35,36 @@ a:link
 
 a.more
     font-size: 0.875em
-    background-image: url(../icons/more.gif)
-    background-position: 100% 50%
-    background-repeat: no-repeat
+    background: url(../icons/more.gif) no-repeat right center
     font-size: 0.8em
     padding-right: 1.25em
-    
+
+// icons from iconic/raster/black/
+a.add
+    padding-left: 1.5em
+    background: url(../icons/plus_12x12.png) no-repeat left center
+
+a.edit
+    padding-left: 1.5em
+    background: url(../icons/pen_12x12.png) no-repeat left center
+
+a.delete
+    padding-left: 1.5em
+    background: url(../icons/x_11x11.png) no-repeat left center
+
+a.mail
+    padding-left: 1.5em
+    background: url(../icons/mail_12x9.png) no-repeat left center
+
 //.site-nav
     //background-color: $bgbase
-    
+
 .site-header
     h1
-        font-family: "deva-ideal"
+        font-family: ff-dagny-web-pro,sans-serif
+        font-style: normal
+        font-weight: 700
+        //, "deva-ideal"
         //64px/96px
         font-size: 56em / $fontbase 
         line-height: 1em
@@ -53,7 +72,10 @@ a.more
         margin-bottom: 0
         color: #557
     p
-        font-family: "deva-ideal"
+        font-family: ff-dagny-web-pro,sans-serif
+        font-style: normal
+        //font-weight: 500
+        //font-family: "deva-ideal"
         font-size: 1em
         //margin-top: -2.6em
         //margin-left: 22em
@@ -97,15 +119,18 @@ a.more
     padding: 20px
     font-size: 120%
     background-color: #fefa7f
-    margin: 10px 0
+    border: 2px solid #fcc
+    margin: 20px 0
+    ul, li
+        margin-bottom: 0
 
 .preinfo
-    background-color: $bghighlight
+    background-color: #555
     font-weight: bold
     font-size: 1.125em
-    //color: white
-    //a:link, a:visited
-        //color: white
+    color: white
+    a:link, a:visited
+        color: white
     padding: 2em 1em 1em 1em
     //padding: 2em 0em 1em 0em
     margin-top: 1em
@@ -131,8 +156,10 @@ a.more
 .content-area
     //background-color: white
     h1, h2
-        //font: 36px/48px "omnes-pro"
-        font-family: "deva-ideal"
+        font-family: ff-dagny-web-pro,sans-serif
+        font-style: normal
+        font-weight: 700
+        //font-family: "deva-ideal"
         //font-size: 28em / $fontbase 
     h1
         //color: #557
@@ -141,6 +168,10 @@ a.more
     h2
         //color: #99a
         line-height: 1.875em
+    h3
+        font-family: ff-dagny-web-pro,sans-serif
+        font-style: normal
+        font-weight: 700
     
     //border: 1px solid #ccc
     //border-bottom: 2px solid #bbb

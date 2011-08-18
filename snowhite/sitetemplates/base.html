@@ -135,6 +135,7 @@
           $('#langchange').change(function() {
             $('#setlang').submit();
       		});
+          $(".usermessage").hide().slideDown(500).delay(1500).fadeTo(500, 0.2).slideUp(1000);
           {% block js-document-ready %}{% endblock %}
         })
     </script>
