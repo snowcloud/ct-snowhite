@@ -29,14 +29,12 @@ $entryhead: #983932;
   padding-bottom: 0.5em;
   padding-left: 0px;
 }
-/*
-.entry-descrx .sub {
-  color: #768495;
-  font-size: 0.8em;
-  margin-bottom: 0;
-  padding: 0.4em 0;
-  background: url(bg/comment.png) no-repeat left center;
+.entry-descr .commentx {
+  padding-left: 20px !important;
+  margin-left: 0;
+  background: url(../icons/comment_stroke_12x11.png) no-repeat left 1.2em;
 }
+/*
 .entry-descrx .sub a {
   color: #768495;  
 }

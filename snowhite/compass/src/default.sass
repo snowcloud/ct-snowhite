@@ -41,20 +41,25 @@ a.more
 
 // icons from iconic/raster/black/
 a.add
-    padding-left: 1.5em
+    padding-left: 20px
     background: url(../icons/plus_12x12.png) no-repeat left center
 
 a.edit
-    padding-left: 1.5em
+    padding-left: 20px
     background: url(../icons/pen_12x12.png) no-repeat left center
 
 a.delete
-    padding-left: 1.5em
+    padding-left: 20px
     background: url(../icons/x_11x11.png) no-repeat left center
 
 a.mail
-    padding-left: 1.5em
+    padding-left: 20px
     background: url(../icons/mail_12x9.png) no-repeat left center
+
+p.comment
+    padding-left: 20px !important
+    margin-left: 0
+    background: url(../icons/comment_stroke_12x11.png) no-repeat left 1.2em
 
 //.site-nav
     //background-color: $bgbase
@@ -197,7 +202,7 @@ a.mail
             p
                 padding: 0.3em 0 
                 margin: 0
-            padding: 0.25em  1em 0.5em 1em
+            padding: 0.25em  1em 0.5em 1px * $fontbase
                 
         border-bottom: 1px solid #ccc
         background-color: white
@@ -205,6 +210,9 @@ a.mail
         //padding-bottom: 0.75em
         margin-bottom: 1.5em
         //@include box(#555)
+        .entry-descr
+            margin-left: 1px * $fontbase
+
     form
         margin-bottom: 0
     fieldset
