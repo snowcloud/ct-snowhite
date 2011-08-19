@@ -363,4 +363,17 @@ $fontbase: 14;
 	.remove-bottom { margin-bottom: 0 !important; }
 	.half-bottom { margin-bottom: 0.625em !important; }
 	.add-bottom { margin-bottom: 1.25em !important; }
+	.warn, .alert, .info {
+		padding: 2em;
+		font-weight: bold;
+	}
+	.warn {
+	    background-color: #F58F72;
+	}
+	.alert {
+	    background-color: #fde992;
+	}
+	.info {
+		background-color: #ddffe3;
+		}
 		
