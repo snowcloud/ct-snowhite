@@ -354,8 +354,8 @@ $fontbase: 14;
         background-color: $bgthead;
         color: $colorthead;
     }
-    tbody tr:nth-child(even) td,
-    tbody tr.even td {
+    tbody tr:nth-child(even),
+    tbody tr.even {
         background: $rowodd;
     }
 /* #Misc
