@@ -124,6 +124,13 @@ INSTALLED_APPS = (
 
 ACCOUNT_ACTIVATION_DAYS = 10 # days
 
+SYNONYMS = { 
+    'New template': ugettext('New template'), 
+    'Clinical templates': ugettext('Clinical templates'), 
+    'Clinical template': ugettext('Clinical template'),
+    'template': ugettext('template')
+}
+
 # django-wikiapp settings
 STATIC_MEDIA_PATH = MEDIA_ROOT
 WIKI_REQUIRES_LOGIN=False
