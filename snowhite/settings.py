@@ -110,12 +110,7 @@ INSTALLED_APPS = (
     'ct_blog',
     'ct_groups',
     'ct_template',
-<<<<<<< HEAD
-    # 'basic.blog',
-    # 'basic.inlines',
-=======
     'ct_blog',
->>>>>>> refs/heads/restyle-newlook
     'contact_form',
     'notification',
     'registration',
