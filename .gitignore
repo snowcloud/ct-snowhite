@@ -12,3 +12,7 @@
 /snowhite/compass/.sass-cache/
 /snowhite/media/groups/*
 /snowhite/snowhitedb
+snowhite/static/bg/
+snowhite/static/icons/
+snowhite/static/images/
+snowhite/static/js/
