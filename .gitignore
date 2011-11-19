@@ -1,8 +1,19 @@
-*.pyc
-/snowhite/settings_local.py
-/snowhite/snowhitedb
+/snowhite/static/admin/
+/snowhite/static/css/
+/snowhite/static.old
+/src/
+.DS_Store
+/sql_data/
 /bin/
 /include/
 /lib/
-/sql_data/
-/src/
+/snowhite/settings_local.py
+*.pyc
+/snowhite/compass/.sass-cache/
+/snowhite/media/groups/*
+/snowhite/snowhitedb
+snowhite/static/bg/
+snowhite/static/icons/
+snowhite/static/images/
+snowhite/static/js/
+>>>>>>> refs/heads/restyle-newlook
