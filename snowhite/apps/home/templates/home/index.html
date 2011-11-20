@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% load markup tagging_tags comments ct_blog_tags ct_groups_tags i18n %}
+{% load markup tagging_tags comments ct_blog_tags ct_groups_tags utils i18n %}
 {% block title %}Home{% endblock %}
 
 {% comment %}
@@ -10,7 +10,7 @@
 {% block pre-info %}
 	<div class="container preinfo">
 		<div class="sixteen columns">
-        <p>This is a site for the openEHR community.</p>
+        <p>{{ "/home/top-info/%s/"|flatpage:LANGUAGE_CODE|linebreaks }}</p>
     </div>
   </div>
 {% endblock %}
