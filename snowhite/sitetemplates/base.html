@@ -49,6 +49,7 @@
                           {% comment %}| <a href="/accounts/register/">register</a></p>{% endcomment %}
                 {% endif %}
                 <div class="language_menu">
+<!--                 
                     <form id="setlang" action="/s/setlang/" method="post">{% csrf_token %}
                         {# <img src='/static/media/flags/{{ LANGUAGE_CODE }}.png'> #}
                         <input name="next" type="hidden" value="{{ REQ_FULL_PATH|nologout }}" />
@@ -59,7 +60,7 @@
                         </select>
                         <input id="langsubmit" type="submit" value="{% trans "Change" %}" />
                     </form>
-                </div>
+ -->                </div>
         	</div>
     	</div>
     </div>
