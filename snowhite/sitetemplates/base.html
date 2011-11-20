@@ -1,4 +1,4 @@
-<!doctype html>{% load sitevars utils i18n %}
+{{LANGUAGE_CODE}}/<!doctype html>{% load sitevars utils i18n %}
 <!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
 <!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
 <!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
@@ -73,7 +73,7 @@
     		<div class="eight columns omega line-menu">
     		      <ul>
                   {% if user.is_staff %}<li><a href="/admin/">{% trans "Admin" %}</a></li>{% endif %}
-                  <li><a href="{% site_base %}about/">{% trans "About" %}</a></li>
+                  <li><a href="{% site_base %}about/{{LANGUAGE_CODE}}/">{% trans "About" %}</a></li>
                   <li><a href="{% site_base %}contact/">{% trans "Contact" %}</a></li>
                   <li><a href="{% site_base %}tags/">{% trans "Topics" %}</a></li>
                   <li><a href="{% site_base %}groups/">{% trans "Groups" %}</a></li>
