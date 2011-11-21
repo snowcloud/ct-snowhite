@@ -6,3 +6,5 @@
 /lib/
 /sql_data/
 /src/
+.DS_Store
+.sass-cache
