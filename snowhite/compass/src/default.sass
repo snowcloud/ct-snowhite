@@ -1,0 +1,248 @@
+$eggshell: #fafaf0
+$palegreen: #D4EEE5
+$darkgreen: #2B7A50
+$paleolive: #E7EED9
+$chestnut: #862924
+$offwhite: #f2f2f2
+$darkgrey: #444444
+
+$bgbase: white
+$bghighlight: $offwhite
+$hdrhighlight: $offwhite
+$navfooter: $offwhite
+$bgthead: #777
+$colorthead: white
+$rowbg: #f8f8f8
+$rowodd: #eee
+
+@import "mixins"
+@import "base"
+//@import "layout"
+@import "skeleton_flexi"
+@import "blog"
+@import "group"
+@import "forms"
+
+
+body
+    font: 100%/140% ff-dagny-web-pro,"Lucida Grande","Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif
+    //font: 87.5%/140% ff-dagny-web-pro,"Lucida Grande","Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif
+    //font-family: ff-dagny-web-pro,"Lucida Grande","Lucida Sans Unicode", Arial, Helvetica, Verdana,sans-serif
+    font-style: normal
+    font-weight: 400
+    background-color: $bgbase
+
+a:link
+    border-bottom: 1px dotted #68C3EE
+    color: #343867
+    text-decoration: none
+
+a.more
+    font-size: 0.875em
+    background: url(../icons/more.gif) no-repeat right center
+    font-size: 0.8em
+    padding-right: 1.25em
+
+// icons from iconic/raster/black/
+a.add
+    padding-left: 20px
+    background: url(../icons/plus_12x12.png) no-repeat left center
+
+a.edit
+    padding-left: 20px
+    background: url(../icons/pen_12x12.png) no-repeat left center
+
+a.delete
+    padding-left: 20px
+    background: url(../icons/x_11x11.png) no-repeat left center
+
+a.mail
+    padding-left: 20px
+    background: url(../icons/mail_12x9.png) no-repeat left center
+
+p.comment
+    padding-left: 20px !important
+    margin-left: 0
+    background: url(../icons/comment_stroke_12x11.png) no-repeat left 1.2em
+
+//.site-nav
+    //background-color: $bgbase
+
+.site-header
+    h1
+        font-family: ff-dagny-web-pro,sans-serif
+        font-style: normal
+        font-weight: 700
+        //, "deva-ideal"
+        //64px/96px
+        font-size: 56em / $fontbase 
+        line-height: 1em
+        padding-top: 0.2em
+        margin-bottom: 0
+        color: #557
+    p
+        font-family: ff-dagny-web-pro,sans-serif
+        font-style: normal
+        //font-weight: 500
+        //font-family: "deva-ideal"
+        font-size: 1em
+        //margin-top: -2.6em
+        //margin-left: 22em
+    background-color: $eggshell
+    padding-top: 1.5em 0 1.2em 0
+    //padding-bottom: 1.3em
+    // border: 1px solid #ccc
+    border-bottom: 3px solid #ccc
+
+    .line-menu
+        li
+            display: inline
+            float: right
+            padding-left: 1em
+            margin-bottom: 1em
+        margin-top: 3.4em
+        //margin-left: -32em
+
+.container-wrapper.login, .site-footer
+    background: black url(../bg/bg-black-bar.png) repeat-x 0 top
+    color: white
+    p
+        float: left
+        font-weight: bold
+        margin: 10px 0
+    a
+        color: white
+    border-bottom: 1px solid #ccc
+.site-footer
+    padding: 1em
+.language_menu
+    float: right
+    margin-top: 10px
+    form, select
+        margin-bottom: 0
+    
+//.container-wrapper-preinfo
+    //background: #A7C4D1 url(../bg/bg-content-top.png) repeat-x 0 bottom
+
+.usermessage
+    padding: 20px
+    font-size: 120%
+    background-color: #fefa7f
+    border: 2px solid #fcc
+    margin: 20px 0
+    ul, li
+        margin-bottom: 0
+
+.preinfo
+    //background-color: #444
+    background: #000 url(../images/template-01.jpg) no-repeat -1% center
+    font-family: ff-dagny-web-pro,sans-serif
+    font-style: normal
+    font-weight: 400
+    font-size: 2em
+    color: white
+    a:link, a:visited
+        color: #dfd
+    padding: 2em 1em 1em 22%
+    //padding: 2em 0em 1em 0em
+    margin-top: 1em
+    margin-bottom: 1em
+    
+    box-shadow: 1px 2px 2px #fff
+    -moz-box-shadow: 1px 2px 2px #fff
+    -webkit-box-shadow: 0px 2px 2px #fff
+    border-radius: 3px
+    -moz-border-radius: 3px
+    -webkit-border-radius: 3px
+    
+//.container-wrapper.content
+    //background: white url(../bg/bg-content-bot.png) repeat-x 0 top
+
+.breadcrumbs
+    p
+        font-size: 0.875em
+        margin-left: 0
+        //background-color: red
+        //padding: 1em
+        
+.content-area
+    //background-color: white
+    h1, h2
+        font-family: ff-dagny-web-pro,sans-serif
+        font-style: normal
+        font-weight: 700
+        //font-family: "deva-ideal"
+        //font-size: 28em / $fontbase 
+    h1
+        //color: #557
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5)
+        line-height: 1.55em
+    h2
+        //color: #99a
+        line-height: 1.875em
+    h3
+        font-family: ff-dagny-web-pro,sans-serif
+        font-style: normal
+        font-weight: 700
+    
+    //border: 1px solid #ccc
+    //border-bottom: 2px solid #bbb
+    margin-bottom: 1em
+    padding: 1em 0
+    //@include box(#555)
+    
+.secondary
+    .nav
+        h2
+            //background-color: $hdrhighlight
+            color: black
+            //font-size: 21em / $fontbase
+            padding-left: 1px * $fontbase
+            margin: 0
+        p, ul
+            padding-left: 1px * $fontbase
+            padding-top: 0.75em
+            margin-bottom: 1.5em
+        .footer
+            //background-color: $navfooter
+            border-top: 1px solid white
+            p
+                padding: 0.3em 0 
+                margin: 0
+            padding: 0.25em  1em 0.5em 1px * $fontbase
+                
+        border-bottom: 1px solid #ccc
+        background-color: white
+        //padding: 0 1em 0.75em 1em
+        //padding-bottom: 0.75em
+        margin-bottom: 1.5em
+        //@include box(#555)
+        .entry-descr
+            margin-left: 1px * $fontbase
+
+    form
+        margin-bottom: 0
+    fieldset
+        padding: 0 0 0.1em 1em
+    fieldset.submit
+        padding-left: 1em
+        padding-top: 0.5em
+        margin-bottom: 0
+    input[type="text"], 
+    input[type="password"],
+    input[type="email"],
+    textarea, 
+    select
+        width: 90%
+    ul.top
+        font-weight: bold
+        
+/* Mobile/Browser */
+@media only screen and (max-width: 767px)
+    .site-header
+        .line-menu
+            li
+                float: left
+                padding-left: 0
+                padding-right: 1em
+

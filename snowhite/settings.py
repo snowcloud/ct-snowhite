@@ -40,12 +40,18 @@ PROJECT_PATH = os.path.abspath(os.path.split(__file__)[0])
 
 sys.path.insert(0, os.path.join(PROJECT_PATH, "apps"))
 # sys.path.insert(0, os.path.join(PROJECT_PATH, "libs"))
-MEDIA_ROOT = os.path.join(PROJECT_PATH, 'static')
+MEDIA_ROOT = os.path.join(PROJECT_PATH, 'media')
+MEDIA_URL = '/media/'
+
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(PROJECT_PATH, 'static')
+
+# STATICFILES_DIRS = []
+
 TEMPLATE_DIRS = (
     os.path.join(PROJECT_PATH, 'sitetemplates')
 )
 
-ADMIN_MEDIA_PREFIX = '/admin/media/'
 # this doesn't need to be secure...
 SECRET_KEY = 'W03uCcybKXMWUShFRariiEBgEozLaQOLrfkiGZpsRZAtOYvuMv'
 
@@ -55,15 +61,19 @@ AUTHENTICATION_BACKENDS = (
 
 # List of callables that know how to import templates from various sources.
 TEMPLATE_LOADERS = (
-    'django.template.loaders.filesystem.load_template_source',
-    'django.template.loaders.app_directories.load_template_source',
+    # 'django.template.loaders.filesystem.load_template_source',
+    # 'django.template.loaders.app_directories.load_template_source', <- deprecated in django1.3
+    'django.template.loaders.filesystem.Loader',
+    'django.template.loaders.app_directories.Loader'
 )
 
 TEMPLATE_CONTEXT_PROCESSORS = (
-    "django.core.context_processors.auth",
+    # "django.core.context_processors.auth",
+    'django.contrib.auth.context_processors.auth',
     "django.core.context_processors.debug",
     "django.core.context_processors.i18n",
     "django.core.context_processors.request",
+    'django.core.context_processors.static',
     # "shared_apps.shared_utils.views.set_vars", 
 )
 
@@ -95,12 +105,12 @@ INSTALLED_APPS = (
     'django.contrib.redirects',
     'django.contrib.sessions',
     'django.contrib.sites',
+    'django.contrib.staticfiles',
     'home',
     'ct_blog',
     'ct_groups',
     'ct_template',
-    # 'basic.blog',
-    # 'basic.inlines',
+    'ct_blog',
     'contact_form',
     'notification',
     'registration',
@@ -114,6 +124,13 @@ INSTALLED_APPS = (
 )
 
 ACCOUNT_ACTIVATION_DAYS = 10 # days
+
+SYNONYMS = { 
+    'New template': ugettext('New template'), 
+    'Clinical templates': ugettext('Clinical templates'), 
+    'Clinical template': ugettext('Clinical template'),
+    'template': ugettext('template')
+}
 
 # django-wikiapp settings
 STATIC_MEDIA_PATH = MEDIA_ROOT
