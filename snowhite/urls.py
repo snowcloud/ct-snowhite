@@ -24,6 +24,7 @@ except AttributeError:
 
 urlpatterns = patterns('',
     url(r'^$', 'home.views.home', name='home'),
+    url(r'^s/setlang/$', 'ct_groups.views.setlang', name='set-lang'),
     url(r'^catalogues/$', 'django.views.generic.list_detail.object_list',
         dict(queryset=CTGroup.objects.filter(tags__contains='catalogue'), 
         paginate_by=400,
