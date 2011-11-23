@@ -9,7 +9,7 @@
     float: right
     padding: 1em
     margin-left: 3em
-    margin-bottom: 3em
+    //margin-bottom: 3em
     border: 2px solid #ccc
     @include box(#555)
 
@@ -20,23 +20,35 @@ table.siteresources
     border-collapse: collapse
     border: thin solid Silver
     margin: 0 0 1.5em 0
-    width:  100%
+    width:  99%
+    table-layout: fixed
     padding: 0
     font-size: 0.875em
+    overflow: hidden
 
-.siteresources th 
-    border-bottom: thin solid #DCDCDC
-    //color: #003f84
-    padding: 0.4em 0.4em 0.6em 0.6em
-    vertical-align: text-top
-    font-size: 1.3em
+.siteresources
+    th 
+        border-bottom: thin solid #DCDCDC
+        //color: #003f84
+        padding: 0.4em 0.4em 0.6em 0.6em
+        vertical-align: text-top
+        font-size: 1.3em
+    //th.title
+        //width: 40%
+    th.version
+        width: 20%
+    th.status
+        width: 25%
 
-//.siteresources tr 
+.siteresources tr 
+    //width: 20%
 
 .siteresources td 
     border-bottom: thin solid #DCDCDC
     padding: 0.4em 0.4em 0.6em 0.6em
     vertical-align: text-top
+    word-wrap:break-word
+    overflow: hidden
 
 .siteresources span 
     background-repeat: no-repeat

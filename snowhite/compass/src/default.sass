@@ -23,7 +23,9 @@ $rowodd: #eee
 @import "group"
 @import "forms"
 
-
+.test
+    background-color: green
+    
 body
     font: 100%/140% ff-dagny-web-pro,"Lucida Grande","Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif
     //font: 87.5%/140% ff-dagny-web-pro,"Lucida Grande","Lucida Sans Unicode", Arial, Helvetica, Verdana, sans-serif
@@ -39,26 +41,26 @@ a:link
 
 a.more
     font-size: 0.875em
-    background: url(../icons/more.gif) no-repeat right center
+    background: url(../icons/more.gif) no-repeat right 0.25em
     font-size: 0.8em
     padding-right: 1.25em
 
 // icons from iconic/raster/black/
 a.add
     padding-left: 20px
-    background: url(../icons/plus_12x12.png) no-repeat left center
+    background: url(../icons/plus_12x12.png) no-repeat left 0.25em
 
 a.edit
     padding-left: 20px
-    background: url(../icons/pen_12x12.png) no-repeat left center
+    background: url(../icons/pen_12x12.png) no-repeat left 0.25em
 
 a.delete
     padding-left: 20px
-    background: url(../icons/x_11x11.png) no-repeat left center
+    background: url(../icons/x_11x11.png) no-repeat left 0.25em
 
 a.mail
     padding-left: 20px
-    background: url(../icons/mail_12x9.png) no-repeat left center
+    background: url(../icons/mail_12x9.png) no-repeat left 0.25em
 
 p.comment
     padding-left: 20px !important
@@ -100,7 +102,7 @@ p.comment
             float: right
             padding-left: 1em
             margin-bottom: 1em
-        margin-top: 3.4em
+        margin-top: 3.8em
         //margin-left: -32em
 
 .container-wrapper.login, .site-footer
@@ -108,16 +110,21 @@ p.comment
     color: white
     p
         float: left
-        font-weight: bold
+        //font-weight: bold
         margin: 10px 0
     a
         color: white
     border-bottom: 1px solid #ccc
+.ie7
+    .container-wrapper.login
+        padding-bottom: 0.5em
+
 .site-footer
     padding: 1em
 .language_menu
     float: right
     margin-top: 10px
+    width: 13.75em
     form, select
         margin-bottom: 0
     
@@ -140,10 +147,11 @@ p.comment
     font-style: normal
     font-weight: 400
     font-size: 2em
+    line-height: 1.2em
     color: white
     a:link, a:visited
         color: #dfd
-    padding: 2em 1em 1em 22%
+    padding: 1.6em 1em 0.2em 22%
     //padding: 2em 0em 1em 0em
     margin-top: 1em
     margin-bottom: 1em
@@ -159,9 +167,12 @@ p.comment
     //background: white url(../bg/bg-content-bot.png) repeat-x 0 top
 
 .breadcrumbs
+    line-height: 0
     p
         font-size: 0.875em
         margin-left: 0
+        line-height: 1
+
         //background-color: red
         //padding: 1em
         
@@ -190,7 +201,11 @@ p.comment
     margin-bottom: 1em
     padding: 1em 0
     //@include box(#555)
-    
+.ie7
+    .content-area
+        //background-color: red
+        //padding: 0
+
 .secondary
     .nav
         h2
@@ -207,7 +222,7 @@ p.comment
             //background-color: $navfooter
             border-top: 1px solid white
             p
-                padding: 0.3em 0 
+                padding: 0em 0 0.8em 0 
                 margin: 0
             padding: 0.25em  1em 0.5em 1px * $fontbase
                 

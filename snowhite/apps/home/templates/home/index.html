@@ -1,6 +1,6 @@
 {% extends "base.html" %}
 {% load markup tagging_tags comments ct_blog_tags ct_groups_tags utils i18n %}
-{% block title %}Home{% endblock %}
+{% block title %}{% trans 'Home' %}{% endblock %}
 
 {% comment %}
 <div class="container-wrapper-preinfo">
@@ -8,10 +8,9 @@
 {% endcomment %}
     
 {% block pre-info %}
-	<div class="container preinfo">
-		<div class="sixteen columns">
-        <p>{{ "/home/top-info/%s/"|flatpage:LANGUAGE_CODE|linebreaks }}</p>
-        <p><a href="/about/{{LANGUAGE_CODE}}/">Read more &rarr;</a></p>
+  <div class="container preinfo">
+    <div class="sixteen columns">
+        {{ "/home/top-info/%s/"|flatpage:LANGUAGE_CODE|linebreaks }}
     </div>
   </div>
 {% endblock %}
@@ -23,7 +22,7 @@
 {% block content %}
 
 
-    <div class="ten columns">
+    <div class="ten columns alpha">
         <h2>{% trans 'News' %}</h2>
         {% get_latest_posts 5 as latest_post_list %}
             {% for post in latest_post_list %}
@@ -67,7 +66,7 @@
           {% endfor %}
     </div>
 
-    <div class="five offset-by-one columns secondary">
+    <div class="five offset-by-one columns secondary omega">
           {% if user.is_authenticated  %}
               <div class="nav">
                   <h2>{% trans 'Your groups' %}</h2>

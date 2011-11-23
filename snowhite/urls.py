@@ -14,16 +14,17 @@ from ct_groups.feeds import BlogPostsPublicFeed
 from tagging.models import Tag
 from wiki import views as wiki_views
 
-feeds = { 'latestnews': BlogPostsPublicFeed, }
-
 try:
     email_login = settings.EMAIL_LOGIN
 except AttributeError:
     email_login = True
 
-
 urlpatterns = patterns('',
+    # Example:
     url(r'^$', 'home.views.home', name='home'),
+    url(r'^s/setlang/$', 'ct_groups.views.setlang', name='set-lang'),
+    url(r'^process-digests/$', 'ct_groups.views.do_digests', name="process-digests"),
+
     url(r'^catalogues/$', 'django.views.generic.list_detail.object_list',
         dict(queryset=CTGroup.objects.filter(tags__contains='catalogue'), 
         paginate_by=400,
@@ -38,8 +39,6 @@ urlpatterns = patterns('',
         name="mapping"),
 
     (r'^templates/', include('ct_template.urls')),
-        
-        
     (r'^groups/', include('ct_groups.urls')),
     (r'^ct_groups/', include('ct_groups.urls')),
     url(r'^tags/$', 'django.views.generic.list_detail.object_list',
@@ -50,32 +49,24 @@ urlpatterns = patterns('',
         dict(queryset=Tag.objects.all(), 
         slug_field='name',
         template_name='topics/topic_detail.html', ), name="tag"),
-    
-    # (r'^openid/', include('django_openid_auth.urls')),
+
     url(r'^accounts/profile/$', 'ct_groups.views.profile', name='profile'),
-    (r'^accounts/profile/changed/$', 'django.views.generic.simple.direct_to_template', 
-        {'template': 'registration/profile_changed.html'}),
+    (r'^accounts/profile/changed/$', 'django.views.generic.simple.direct_to_template', {'template': 'registration/profile_changed.html'}),
 
     (r'^blog/', include('ct_blog.urls')),
     (r'^comments/', include('django.contrib.comments.urls')) ,
     url(r'^contact/$', contact_form, { 'form_class': SCContactForm }, name='contact_form'),
     url(r'^contact/sent/$', direct_to_template, { 'template': 'contact_form/contact_form_sent.html' },
         name='contact_form_sent'),
-    # (r'^contact/', include('home.contact_urls')),
 
-    (r'^feeds/(?P<url>.*)/$', 'django.contrib.syndication.views.feed', {'feed_dict': feeds}),
+    (r'^feeds/latestnews/$', BlogPostsPublicFeed()),
     (r'^notices/', include('notification.urls')),
 
     (r'^i18n/', include('django.conf.urls.i18n')),
 
-    # Uncomment this for admin:
-    #(r'^admin/filebrowser/', include('filebrowser.urls')),
-    # (r'^admin/', include('smuggler.urls')), # put it before admin url patterns
     (r'^admin/', include(admin.site.urls)),
     (r'^r/', include('django.conf.urls.shortcut')),
-
 )
-
 if email_login:
     urlpatterns += patterns('ct_framework.views',
         url(r'^accounts/login/$', 'login', name='login'),
@@ -95,7 +86,6 @@ urlpatterns += patterns('',
         {'backend': 'ct_framework.registration_backends.CTRegistrationBackend'}),
     (r'^accounts/', include('registration.backends.default.urls')),
 )
-
 
 if settings.DEBUG:
     urlpatterns += patterns('',
