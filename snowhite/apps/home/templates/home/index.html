@@ -25,7 +25,10 @@
 
     <div class="ten columns alpha">
         <h2>{% trans 'News' %}</h2>
-        {% get_latest_posts 5 as latest_post_list %}
+
+        {% if user.is_staff %}<p><a href="{% url blog-new-site-post %}">{% trans "Add new site post" %}</a></p>{% endif %}
+
+        {% get_latest_posts 8 as latest_post_list %}
             {% for post in latest_post_list %}
 
                 {% if post|post_access:user %}
