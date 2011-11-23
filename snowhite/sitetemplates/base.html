@@ -72,7 +72,7 @@
     		<div class="eight columns omega line-menu">
     		      <ul>
                   {% if user.is_staff %}<li><a href="/admin/">{% trans "Admin" %}</a></li>{% endif %}
-                  <li><a href="{% site_base %}about/">{% trans "About" %}</a></li>
+                  <li><a href="{% site_base %}about/{{LANGUAGE_CODE}}/">{% trans "About" %}</a></li>
                   <li><a href="{% site_base %}contact/">{% trans "Contact" %}</a></li>
                   <li><a href="{% site_base %}tags/">{% trans "Topics" %}</a></li>
                   <li><a href="{% site_base %}groups/">{% trans "Groups" %}</a></li>

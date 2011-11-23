@@ -90,6 +90,9 @@ $fontbase: 14;
  	.subheader { color: #777; }
 
  	p { margin: 0 0 1.25em 0.5em; }
+ 	.ie7
+	 	p { margin: 0 0 1em 0.5em; }
+
  	p img { margin: 0; }
  	p.lead { font-size: 21em / $fontbase; line-height: 1.2857em; color: #777;  }
 
@@ -97,7 +100,8 @@ $fontbase: 14;
  	strong { font-weight: bold; color: #333; }
  	small { font-size: 80%; }
 
-	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; margin: 10em / $fontbase 0 16em / $fontbase; height: 0; }
+	hr { border: solid #ddd; border-width: 1px 0 0; clear: both; height: 0; }
+	// margin: 10em / $fontbase 0 16em / $fontbase; 
 
 /* #Links
 ================================================== */
