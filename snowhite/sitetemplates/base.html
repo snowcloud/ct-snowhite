@@ -38,15 +38,17 @@
     	<div class="container">
     		<div class="sixteen columns">
                 {% if user.is_authenticated %}
-                    <p>Logged in:
-                      {{ user.username }} | <a href="{% site_base %}accounts/logout/">log out</a>
-                          | <a href="/accounts/profile/">my details</a>
-                          | <a href="/accounts/password_change/">change password</a></p>
+                    <p>{% trans "Logged in" %}:
+                      {{ user.username }} | <a href="{% site_base %}accounts/logout/">{% trans "Log out" %}</a>
+                          | <a href="/accounts/profile/">{% trans "My details" %}</a>
+                          | <a href="/accounts/password_change/">{% trans "Change password" %}</a>
+                      {% if user.is_staff %}| <a href="/admin/">{% trans "Admin" %}</a>{% endif %}
+                    </p>
                 {% else %}
                     <p>
-                      <a href="{% site_base %}accounts/login/?next={{ REQ_FULL_PATH|nologout }}">log in</a>
-                          | <a href="/password_reset/">forgotten user name or password?</a>
-                          {% comment %}| <a href="/accounts/register/">register</a></p>{% endcomment %}
+                      <a href="{% site_base %}accounts/login/?next={{ REQ_FULL_PATH|nologout }}">{% trans "Log in" %}</a>
+                          | <a href="/password_reset/">{% trans "Forgotten user name or password?" %}</a>
+                          {% comment %}| <a href="/accounts/register/">{% trans "Register" %}</a></p>{% endcomment %}
                 {% endif %}
                 <div class="language_menu">
                     <form id="setlang" action="/s/setlang/" method="post">{% csrf_token %}
@@ -71,7 +73,6 @@
     		</div>
     		<div class="eight columns omega line-menu">
     		      <ul>
-                  {% if user.is_staff %}<li><a href="/admin/">{% trans "Admin" %}</a></li>{% endif %}
                   <li><a href="{% site_base %}about/{{LANGUAGE_CODE}}/">{% trans "About" %}</a></li>
                   <li><a href="{% site_base %}contact/">{% trans "Contact" %}</a></li>
                   <li><a href="{% site_base %}tags/">{% trans "Topics" %}</a></li>
