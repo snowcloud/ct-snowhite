@@ -1,19 +1,11 @@
 Snowhite
 ============
-:Info: See `the ClinicalTemplates.org web site <http://clinicaltemplates.org>`_ for more information. 
+:Info: See `the project home page <http://snowcloud.github.com/ct-snowhite/>`_ for more information. 
 :Author: Derek Hoy <derek@snowcloud.co.uk>
 
 About
 -----
 This is a starter `Django <http://djangoproject.com>`_ project for the ClinicalTemplates web framework.
-
-*Please note- this is incomplete and not currently installable.*
-
-git clone into directory
-cd directory
-pip install -r requirements.txt
-
-Note here about adding links in /static/ to ct_template css, js.
 
 Initializing database
 -----
