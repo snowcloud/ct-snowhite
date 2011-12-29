@@ -1,0 +1,72 @@
+
+.groupinfo
+    background-color: transparent
+    //padding: 1em
+    //@include box(#555)
+    //border: 1px solid #ccc
+    
+.grouplogo
+    float: right
+    padding: 1em
+    margin-left: 3em
+    //margin-bottom: 3em
+    border: 2px solid #ccc
+    @include box(#555)
+
+/* @group siteresources */
+
+table.siteresources
+    background-color: $rowbg
+    border-collapse: collapse
+    border: thin solid Silver
+    margin: 0 0 1.5em 0
+    width:  99%
+    table-layout: fixed
+    padding: 0
+    font-size: 0.875em
+    overflow: hidden
+
+.siteresources
+    th 
+        border-bottom: thin solid #DCDCDC
+        //color: #003f84
+        padding: 0.4em 0.4em 0.6em 0.6em
+        vertical-align: text-top
+        font-size: 1.3em
+    //th.title
+        //width: 40%
+    th.version
+        width: 20%
+    th.status
+        width: 25%
+
+.siteresources tr 
+    //width: 20%
+
+.siteresources td 
+    border-bottom: thin solid #DCDCDC
+    padding: 0.4em 0.4em 0.6em 0.6em
+    vertical-align: text-top
+    word-wrap:break-word
+    overflow: hidden
+
+.siteresources span 
+    background-repeat: no-repeat
+    color: #4682B4
+
+.siteresources span.www 
+    background-image: url('icon_world.gif')
+
+.siteresources span.pdf 
+    background-image: url('file_acrobat.gif')
+
+.siteresources span.doc 
+    background-image: url('page_white_word.gif')
+
+.siteresources span.file 
+    background-image: url('box.gif')
+
+.siteresources span.filesize 
+    font-size: 0.8em
+
+/* @end */

@@ -1,16 +1,62 @@
 [
-
-  {
-    "pk": "1", 
-    "model": "flatpages.flatpage", 
-    "fields": {
-        "registration_required": 0, 
-        "title": "About CatMap", 
-        "url": "\/about\/", 
-        "template_name": "", 
-        "sites": [1], 
-        "content": "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.\n\nLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.", 
-        "enable_comments": 0
+    {
+        "pk": 1, 
+        "model": "flatpages.flatpage", 
+        "fields": {
+            "registration_required": false, 
+            "title": "About this site...", 
+            "url": "/about/en/", 
+            "template_name": "", 
+            "sites": [
+                1
+            ], 
+            "content": "This site is ...\r\n\r\n\r\nClick <a href=\"http://en.wikipedia.org/wiki/Textile_%28markup_language%29\" target=\"_blank\">here</a> for information on editing the wiki pages", 
+            "enable_comments": false
+        }
+    }, 
+    {
+        "pk": 2, 
+        "model": "flatpages.flatpage", 
+        "fields": {
+            "registration_required": false, 
+            "title": "Over ...", 
+            "url": "/about/nl/", 
+            "template_name": "", 
+            "sites": [
+                1
+            ], 
+            "content": "Deze site is ...\r\n\r\nKlik <a href=\"http://en.wikipedia.org/wiki/Textile_%28markup_language%29\" target=\"_blank\">hier</a> voor uitleg om de wiki pagina's te maken (De uitleg is in het Engels).", 
+            "enable_comments": false
+        }
+    }, 
+    {
+        "pk": 3, 
+        "model": "flatpages.flatpage", 
+        "fields": {
+            "registration_required": false, 
+            "title": "text at top of home page", 
+            "url": "/home/top-info/en/", 
+            "template_name": "", 
+            "sites": [
+                1
+            ], 
+            "content": "This is an example site for you to change. \r\n\r\n", 
+            "enable_comments": false
+        }
+    }, 
+    {
+        "pk": 4, 
+        "model": "flatpages.flatpage", 
+        "fields": {
+            "registration_required": false, 
+            "title": "text at top of home page (dutch)", 
+            "url": "/home/top-info/nl/", 
+            "template_name": "", 
+            "sites": [
+                1
+            ], 
+            "content": "Dit is de ... ", 
+            "enable_comments": false
+        }
     }
-  }
 ]

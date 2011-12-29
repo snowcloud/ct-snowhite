@@ -1,100 +1,148 @@
-{% load sitevars utils i18n %}<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html lang="en">
+<!doctype html>{% load sitevars utils i18n %}
+<!--[if lt IE 7 ]><html class="ie ie6" lang="en"> <![endif]-->
+<!--[if IE 7 ]><html class="ie ie7" lang="en"> <![endif]-->
+<!--[if IE 8 ]><html class="ie ie8" lang="en"> <![endif]-->
+<!--[if (gte IE 9)|!(IE)]><!--><html lang="en"> <!--<![endif]-->
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="keywords" content="">
-    <meta name="description" content="">
-    <link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen, projection">
-    <link rel="stylesheet" href="/static/css/blueprint/print.css" type="text/css" media="print">    
-    <link rel="stylesheet" href="/static/css/default.css" type="text/css" media="screen, print">    
-    <!--[if IE]><link rel="stylesheet" href="/static/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-    <title>Snowhite: {% block title %}{% endblock %}</title>
-    <link rel="shortcut icon" type="/image/ico" href="/static/favicon.ico">
-    <!-- <link rel="alternate" type="application/rss+xml" title="RSS" href="/feeds/latestnews/"/> -->
-    
-    {% block head_extra %}{% endblock %}
+
+	<!-- Basic Page Needs
+  ================================================== -->
+	<meta charset="utf-8" />
+	<title>Snowhite: {% block title %}{% endblock %}</title>
+	<meta name="description" content="">
+	<meta name="author" content="SnowCloud.co.uk">
+
+	<!-- Mobile Specific Metas
+  ================================================== -->
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" /> 
+	
+	<!-- CSS
+  ================================================== -->
+	<link rel="stylesheet" href="/static/css/default.css">
+  {% block stylesheet_extra %}{% endblock %}
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="/static/images/favicon.ico">
+	<link rel="apple-touch-icon" href="/static/images/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="/static/images/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon" sizes="114x114" href="/static/images/apple-touch-icon-114x114.png" />
+
+  <script type="text/javascript" src="http://use.typekit.com/mmc1wbc.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
 </head>
-<body {% block bodyid %}{% endblock %} {% block bodyclass %}class="single-col"{% endblock %}>
+<body>
 
-    <div class="container">
-        <div id="header" class="column span-24">
-            <div id="header-menu">
-
-                <form action="/i18n/setlang/" method="post">{% csrf_token %}
-                    <a href="/">home</a> -
-                    <a href="/groups/">groups</a> -
-                    <a href="/tags/">topics</a> -
-                    <a href="/contact/">contact</a> -
-                    <a href="/about/">about</a> -
-                    <a href="http://www.clinicaltemplates.org/">ClinicalTemplates.org</a>
-                    {% if perms.flatpages.change_flatpage %}- <a href="/admin/">admin</a>{% endif %}
-                    <!-- <input name="next" type="hidden" value="{{ REQ_FULL_PATH|nologout }}" />
-                    {% ifequal LANGUAGE_CODE "en"  %}
-                        <input name="language" type="hidden" value="it" />
-                        <input type="submit" value="Italian version" />
-                    {% else %}
-                        <input name="language" type="hidden" value="en" />
-                        <input type="submit" value="English version" />
-                    {% endifequal %} -->
-                </form>
-            </div>
-
-            <h1><a title="Snowhite" href="/">Snowhite demo siteA</a></h1>
-        </div>
-        <div id="subhead">A playground for the ClinicalTemplates.org web framework</div>
-
-    </div>
-
-    <div class="container-wrapper-login">
-    <div class="container">
-        <div id="login-bar" class="column span-24">
-            <div class="column span-16">
+	<div class="container-wrapper login"> 
+    	<div class="container">
+    		<div class="sixteen columns">
                 {% if user.is_authenticated %}
-                    <p>Logged in:
-                      {{ user.username }} | <a href="{% site_base %}accounts/logout/">log out</a>
-                          | <a href="/accounts/profile/">my details</a>
-                          | <a href="/accounts/password_change/">change password</a></p>
+                    <p>{% trans "Logged in" %}:
+                      {{ user.username }} | <a href="{% site_base %}accounts/logout/">{% trans "Log out" %}</a>
+                          | <a href="/accounts/profile/">{% trans "My details" %}</a>
+                          | <a href="/accounts/password_change/">{% trans "Change password" %}</a>
+                      {% if user.is_staff %}| <a href="/admin/">{% trans "Admin" %}</a>{% endif %}
+                    </p>
                 {% else %}
                     <p>
-                      <a href="{% site_base %}accounts/login/?next={{ REQ_FULL_PATH|nologout }}">log in</a>
-                          | <a href="/password_reset/">forgotten user name or password?</a>
-                          {% comment %}| <a href="/accounts/register/">register</a></p>{% endcomment %}
+                      <a href="{% site_base %}accounts/login/?next={{ REQ_FULL_PATH|nologout }}">{% trans "Log in" %}</a>
+                          | <a href="/password_reset/">{% trans "Forgotten user name or password?" %}</a>
+                          {% comment %}| <a href="/accounts/register/">{% trans "Register" %}</a></p>{% endcomment %}
                 {% endif %}
-            </div>
-            <div id="login-bar-search" class="column span-8 last">
-
-                <form action="http://www.google.com/cse" id="cse-search-box">
-                  <p>
-                    <input type="hidden" name="cx" value="014668001863459659633:4sgrr6bdxyy" />
-                    <input type="hidden" name="ie" value="UTF-8" />
-                    <input type="text" name="q" size="24" />
-                    <input type="submit" name="sa" value="Search" />
-                  </p>
-                </form>
-            </div>
-        </div>        
+                <div class="language_menu">
+                    <form id="setlang" action="/s/setlang/" method="post">{% csrf_token %}
+                        {# <img src='/static/media/flags/{{ LANGUAGE_CODE }}.png'> #}
+                        <input name="next" type="hidden" value="{{ REQ_FULL_PATH|nologout }}" />
+                        <select name="language" id="langchange">
+                            {% for lang in LANGUAGES %}
+                                <option value="{{lang.0}}"{% if lang.0 == LANGUAGE_CODE %} selected="selected"{% endif %}>{{lang.1}}</option>
+                            {% endfor %}
+                        </select>
+                        <input id="langsubmit" type="submit" value="{% trans "Change" %}" />
+                    </form>
+                </div>
+        	</div>
+    	</div>
     </div>
-    </div>
-
-
+	<div class="container-wrapper site-header">
+    	<div class="container">
+    		<div class="eight columns alpha">
+    			<h1>Snowhite</h1>
+    			<p>A playground for the ClinicalTemplates.org web framework.</p>
+    		</div>
+    		<div class="eight columns omega line-menu">
+    		      <ul>
+                  <li><a href="{% site_base %}about/{{LANGUAGE_CODE}}/">{% trans "About" %}</a></li>
+                  <li><a href="{% site_base %}contact/">{% trans "Contact" %}</a></li>
+                  <li><a href="{% site_base %}tags/">{% trans "Topics" %}</a></li>
+                  <li><a href="{% site_base %}groups/">{% trans "Groups" %}</a></li>
+                  <li><a href="{% site_base %}">{% trans "Home" %}</a></li>
+    		      </ul>
+    		</div>
+    	</div>
+	</div>
+    
+    
     {% block pre-info %}{% endblock %}
 
-
-
-    <div class="container-wrapper-content {% block content-wrapper-class %}bg-content{% endblock %}"> 
-        <div class="{% block content-class %}plain-content{% endblock %}">
-            <div class="container content-area">{% block content %}{% endblock %}</div>
-        </div>
+	<div class="container-wrapper content">
+    	<div class="container content-area">
+    		<div class="sixteen columns alpha clearfix breadcrumbs">
+    		    {% block breadcrumbs %}{% endblock %}
+        	</div>
+      		<div class="sixteen columns clearfix">
+              {% if messages %}
+                <div class="usermessage">
+                  <ul> 
+                      {% for message in messages %} 
+                          <li class="{{ message.tags }}">{{ message|safe }}</li>
+                      {% endfor %}
+                  </ul>
+                </div>
+              {% endif %}
+            </div>
+    		    {% block content %}{% endblock %}
+        	
+    	</div>
     </div>
-    <div class="container-wrapper-footer">
-    <div id="footer" class="container">
 
-    <p>This site uses the <a href="http://www.clinicaltemplates.org">ClinicalTemplates.org</a> web framework</p>
-
-
+	<div class="container-wrapper site-footer">
+    	<div class="container">
+    		<div class="sixteen columns">
+    			<p>A playground for the ClinicalTemplates.org web framework.</p>
+    		</div>
+    	</div>
     </div>
-    </div>
 
+		
+	<!-- JS
+	================================================== -->
+
+  <!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+  
+
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.5.2/jquery.js"></script>
+	<script>window.jQuery || document.write("<script src='/static/js/jquery-1.5.2.min.js'>\x3C/script>")</script>
+
+  {% block js-extra %}{% endblock %}
+
+	<!-- script src="/static/js/app.js"></script -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+          $('#langsubmit').hide();
+          $('#langchange').change(function() {
+            $('#setlang').submit();
+      		});
+          $(".usermessage").hide().slideDown(500).delay(1500).fadeTo(500, 0.2).slideUp(1000);
+          {% block js-document-ready %}{% endblock %}
+        })
+    </script>
+	
+	
+<!-- End Document
+================================================== -->
 </body>
-
 </html>
