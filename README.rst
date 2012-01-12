@@ -7,13 +7,41 @@ About
 -----
 This is a starter `Django <http://djangoproject.com>`_ project for the ClinicalTemplates web framework.
 
-Initializing database
------
-cd ct-snowhite/snowhite
+Installation
+------------
 
-./manage.py syncdb
-./manage.py migrate --fake
+It is recommended you install this into a working Django setup using `Virtualenv <http://pypi.python.org/pypi/virtualenv>`_- you can then clone the project with Git and do a `pip <http://www.pip-installer.org/>`_ install::
 
-chmod +x post_install
-./post_install
+    git clone git://github.com/snowcloud/ct-snowhite
+    
+    # optional use of virtualenv
+    virtualenv ct-snowhite
+    source ct-snowhite/bin/activate
+    
+    cd ct-snowhite
+    pip install -r requirements.txt
+    
+Setup database::
+
+    cd snowhite
+    ./manage.py syncdb
+    # this will offer a prompt to create a superuser
+    # for a script, use ./manage.py syncdb --noinput
+    ./manage.py migrate ct_groups
+    ./manage.py migrate ct_template
+
+
+Install some default data fixtures::
+
+    cd ../
+    chmod +x post_install
+    ./post_install
+    
+Run the Django server::
+
+    cd snowhite
+    ./manage.py runserver 8080
+
+View the project home page: http://127.0.0.1:8080
+If you have run the post_install, you can now log in as the super user you created when you ran ./manage.py syncdb. If you need to add a super user later, use ``./manage.py createsuperuser``
 

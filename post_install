@@ -9,11 +9,3 @@ export DJANGO_SETTINGS_MODULE=snowhite.settings
 ./manage.py loaddata apps/home/fixtures/flatpages
 ./manage.py loaddata apps/home/fixtures/comments
 
-# use django 1.3 staticmedia management now.
-# cd static/css/
-# ln -s ../../../src/ct-template/ct_template/static/css/ct_template.css 
-# ln -s ../../../src/ct-template/ct_template/static/css/ct_template_enhanced.css
-# cd ../
-# ln -s ../../src/ct-template/ct_template/static/js
-# ln -s ../../src/ct-template/ct_template/static/images
-

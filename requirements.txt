@@ -5,7 +5,7 @@ textile
 Markdown
 docutils
 PIL==1.1.7
-psycopg2
+# psycopg2 - not used in default install
 
 -e git+git://github.com/snowcloud/ct-framework.git#egg=ct-framework
 -e git+git://github.com/snowcloud/ct-groups.git#egg=ct-groups
