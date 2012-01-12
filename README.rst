@@ -36,7 +36,7 @@ Install some default data fixtures::
     
 Run the Django server::
 
-    cd ct-snowhite/snowhite
+    cd snowhite
     ./manage.py runserver 8080
 
 View the project home page: http://127.0.0.1:8080
