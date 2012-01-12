@@ -124,7 +124,8 @@ INSTALLED_APPS = (
 )
 
 ACCOUNT_ACTIVATION_DAYS = 10 # days
-
+# change this to the base URL for your site- used in some templates.
+APP_BASE = "http://127.0.0.1:8080/"
 SYNONYMS = { 
     'New template': ugettext('New template'), 
     'Clinical templates': ugettext('Clinical templates'), 
@@ -139,7 +140,7 @@ WIKI_URL_RE='[^/]+'
 
 CT_VERSION_SAVES = False
 # CT_VERSIONS = '/var/ctversions/snowhite/'
-# needs a SVN repo set at that path
+# needs a Git repo set at that path
 
 # override any of the above in your own settings_local.py
 try:
