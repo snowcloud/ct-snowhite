@@ -4,7 +4,8 @@
 import os
 import sys
 
-DEBUG = False
+# Only enable Debug for a local/development install
+DEBUG = True
 TEMPLATE_DEBUG = DEBUG
 
 ADMINS = (
