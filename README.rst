@@ -25,8 +25,11 @@ Setup database::
 
     cd snowhite
     ./manage.py syncdb
+    # this will offer a prompt to create a superuser
+    # for a script, use ./manage.py syncdb --noinput
     ./manage.py migrate ct_groups
     ./manage.py migrate ct_template
+
 
 Install some default data fixtures::
 
@@ -40,5 +43,5 @@ Run the Django server::
     ./manage.py runserver 8080
 
 View the project home page: http://127.0.0.1:8080
-If you have run the post_install, you can now log in as ``admin/admin`` for full access, or as the super user you created when you ran ./manage.py syncdb. If you need to add a super user later, use ``./manage.py createsuperuser``
+If you have run the post_install, you can now log in as the super user you created when you ran ./manage.py syncdb. If you need to add a super user later, use ``./manage.py createsuperuser``
 
