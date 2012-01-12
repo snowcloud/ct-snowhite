@@ -66,7 +66,7 @@
     "is_removed": 0, 
     "user": 10, 
     "content_type": 14, 
-    "is_public": 10, 
+    "is_public": 1, 
     "user_name": "Trevor Mint", 
     "user_email": "trevor@example.com"
   }
@@ -84,7 +84,7 @@
     "is_removed": 0, 
     "user": 10, 
     "content_type": 14, 
-    "is_public": 10, 
+    "is_public": 1, 
     "user_name": "Trevor Mint", 
     "user_email": "trevor@example.com"
   }
