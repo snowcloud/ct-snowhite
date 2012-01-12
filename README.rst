@@ -23,15 +23,16 @@ It is recommended you install this into a working Django setup using `Virtualenv
     
 Setup database::
 
-    cd ct-snowhite/snowhite
+    cd snowhite
     ./manage.py syncdb
-    ./manage.py migrate --fake
+    ./manage.py migrate ct_groups
+    ./manage.py migrate ct_template
 
 Install some default data fixtures::
 
-    cd ct-snowhite
+    cd ../
     chmod +x post_install
-    post_install
+    ./post_install
     
 Run the Django server::
 
@@ -39,5 +40,5 @@ Run the Django server::
     ./manage.py runserver 8080
 
 View the project home page: http://127.0.0.1:8080
-If you have run the post_install, you can now log in as ``admin/admin`` for full access. If you don't want to run post_install, use ``./manage.py createsuperuser``
+If you have run the post_install, you can now log in as ``admin/admin`` for full access, or as the super user you created when you ran ./manage.py syncdb. If you need to add a super user later, use ``./manage.py createsuperuser``
 
