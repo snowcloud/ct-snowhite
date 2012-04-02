@@ -109,6 +109,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'home',
     'ct_blog',
+    'ct_fileresource',
     'ct_groups',
     'ct_template',
     'ct_blog',
