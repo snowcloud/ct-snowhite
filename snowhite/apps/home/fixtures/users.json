@@ -3,9 +3,9 @@
   "pk": 1, 
   "model": "auth.user", 
   "fields": {
-    "username": "derek", 
-    "first_name": "Derek", 
-    "last_name": "Hoy", 
+    "username": "trevor", 
+    "first_name": "Trevor", 
+    "last_name": "Mint", 
     "is_active": 1, 
     "is_superuser": 1, 
     "is_staff": 1, 
@@ -13,7 +13,7 @@
     "groups": [], 
     "user_permissions": [], 
     "password": "sha1$f46f8$a2fdf6d5e15c848df81a068bfe80d794a0063979", 
-    "email": "derek.hoy@gmail.com", 
+    "email": "trevor@example.com", 
     "date_joined": "2007-05-22 23:54:20"
   }
 }, 
@@ -21,9 +21,9 @@
   "pk": 2, 
   "model": "auth.user", 
   "fields": {
-    "username": "nick", 
-    "first_name": "Nick", 
-    "last_name": "Hardiker", 
+    "username": "annie", 
+    "first_name": "Annie", 
+    "last_name": "Boddie", 
     "is_active": 1, 
     "is_superuser": 1, 
     "is_staff": 1, 
@@ -31,7 +31,7 @@
     "groups": [], 
     "user_permissions": [], 
     "password": "sha1$c7ed3$68db76b162ce6bf60feea29000c8e6e3109bd4a1", 
-    "email": "nick@example.net", 
+    "email": "annie@example.net", 
     "date_joined": "2007-05-22 23:54:20"
   }
 }, 

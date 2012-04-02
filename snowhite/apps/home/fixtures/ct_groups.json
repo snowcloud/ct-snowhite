@@ -176,21 +176,5 @@
       "tool_updates": "single",
       "is_editor": 0
     }
-  },
-  {
-    "pk": 1, 
-    "model": "ct_groups.ctpost", 
-    "fields": {
-      "ct_group": 2, 
-      "categories": []
-    }
-  }, 
-  {
-    "pk": 2, 
-    "model": "ct_groups.ctpost", 
-    "fields": {
-      "ct_group": 2, 
-      "categories": []
-    }
   }
 ]
