@@ -2,7 +2,10 @@ from django.conf.urls.defaults import *
 from django.conf import settings
 from os import path as os_path
 
-from django.views.generic.simple import direct_to_template
+from django.views.generic.base import TemplateView
+from django.views.generic.list import ListView
+from django.views.generic.detail import DetailView
+
 from contact_form.views import contact_form
 from scutils.forms import SCContactForm
 
@@ -25,38 +28,25 @@ urlpatterns = patterns('',
     url(r'^s/setlang/$', 'ct_groups.views.setlang', name='set-lang'),
     url(r'^process-digests/$', 'ct_groups.views.do_digests', name="process-digests"),
 
-    url(r'^catalogues/$', 'django.views.generic.list_detail.object_list',
-        dict(queryset=CTGroup.objects.filter(tags__contains='catalogue'), 
-        paginate_by=400,
-        template_name='ct_groups/ct_groups_index.html',
-        extra_context= { 'select': 'catalogue' } ),
-        name="catalogue"),
-    url(r'^mappings/$', 'django.views.generic.list_detail.object_list',
-        dict(queryset=CTGroup.objects.filter(tags__contains='mapping'), 
-        paginate_by=400,
-        template_name='ct_groups/ct_groups_index.html',
-        extra_context= { 'select': 'mapping' } ),
-        name="mapping"),
-
     (r'^templates/', include('ct_template.urls')),
     (r'^groups/', include('ct_groups.urls')),
     (r'^ct_groups/', include('ct_groups.urls')),
-    url(r'^tags/$', 'django.views.generic.list_detail.object_list',
-        dict(queryset=Tag.objects.all(),
+    url(r'^tags/$', ListView.as_view(
+        queryset=Tag.objects.all(),
         paginate_by=400,
-        template_name='topics/topic_list.html',), name="tags"),
-    url(r'^tags/(?P<slug>[^/]+)/$', 'django.views.generic.list_detail.object_detail', 
-        dict(queryset=Tag.objects.all(), 
+        template_name='topics/topic_list.html'), name="tags"),
+    url(r'^tags/(?P<slug>[^/]+)/$', DetailView.as_view( 
+        queryset=Tag.objects.all(), 
         slug_field='name',
-        template_name='topics/topic_detail.html', ), name="tag"),
+        template_name='topics/topic_detail.html'), name="tag"),
 
     url(r'^accounts/profile/$', 'ct_groups.views.profile', name='profile'),
-    (r'^accounts/profile/changed/$', 'django.views.generic.simple.direct_to_template', {'template': 'registration/profile_changed.html'}),
+    (r'^accounts/profile/changed/$', TemplateView.as_view(template_name='registration/profile_changed.html')),
 
     (r'^blog/', include('ct_blog.urls')),
     (r'^comments/', include('django.contrib.comments.urls')) ,
     url(r'^contact/$', contact_form, { 'form_class': SCContactForm }, name='contact_form'),
-    url(r'^contact/sent/$', direct_to_template, { 'template': 'contact_form/contact_form_sent.html' },
+    url(r'^contact/sent/$', TemplateView.as_view(template_name='contact_form/contact_form_sent.html'),
         name='contact_form_sent'),
 
     (r'^feeds/latestnews/$', BlogPostsPublicFeed()),
