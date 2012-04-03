@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% load markup tagging_tags comments ct_blog_tags ct_groups_tags utils i18n %}
+{% load future %}
 {% block title %}{% trans 'Home' %}{% endblock %}
 
 {% comment %}
@@ -26,7 +27,7 @@
     <div class="ten columns alpha">
         <h2>{% trans 'News' %}</h2>
 
-        {% if user.is_staff %}<p><a href="{% url blog-new-site-post %}">{% trans "Add new site post" %}</a></p>{% endif %}
+        {% if user.is_staff %}<p><a href="{% url 'blog-new-site-post' %}">{% trans "Add new site post" %}</a></p>{% endif %}
 
         {% get_latest_posts 8 as latest_post_list %}
             {% for post in latest_post_list %}
@@ -43,7 +44,7 @@
                                 <li class="entry-comments"><a href="{{ post.get_absolute_url }}#comments">{%blocktrans count comment_count as counter%}{{ counter }} comment{%plural%}{{ counter }} comments{%endblocktrans%}</a></li>
                             </ul>
                                 {% if post.group %}
-                                <p>{% trans 'in' %} <a href="{% url group post.group.slug %}">{{ post.group.name }}</a></p>
+                                <p>{% trans 'in' %} <a href="{% url 'group' post.group.slug %}">{{ post.group.name }}</a></p>
                                 {% endif %}
                         </div>
 
@@ -57,7 +58,7 @@
                                     <li class="entry-tags">
                                         <ul class="tags">
                                             {% for tag in tag_list %}
-                                                <li><a href="{% url tag tag.name %}">{{ tag.name }}</a></li>
+                                                <li><a href="{% url 'tag' tag.name %}">{{ tag.name }}</a></li>
                                             {% endfor %}
                                         </ul>
                                     </li>
