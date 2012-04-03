@@ -14,9 +14,12 @@ PIL==1.1.7
 -e git+git://github.com/snowcloud/ct-template.git#egg=ct-template
 -e git+git://github.com/snowcloud/sc-utils.git#egg=sc-utils
 -e git+git://github.com/snowcloud/ct-wikiapp.git#egg=ct-wikiapp
--e hg+http://bitbucket.org/ubernostrum/django-contact-form/#egg=django-contact-form
-# django-notification not fixed for django 1.4- using fork
+
+# notification, contact not fixed for django 1.4- using forks
+# -e hg+http://bitbucket.org/ubernostrum/django-contact-form/#egg=django-contact-form
 # -e git+git://github.com/jtauber/django-notification.git#egg=django-notification
+
+-e git+git://github.com/snowcloud/django-contact-form.git#egg=django-contact-form
 -e git+git://github.com/snowcloud/django-notification.git#egg=django-notification
 
 # svn checkout http://django-renderform.googlecode.com/svn/trunk/ django-renderform-read-only
