@@ -8,7 +8,7 @@
 	<!-- Basic Page Needs
   ================================================== -->
 	<meta charset="utf-8" />
-	<title>Snowhite: {% block title %}{% endblock %}</title>
+	<title>openEHR CKI: {% block title %}{% endblock %}</title>
 	<meta name="description" content="">
 	<meta name="author" content="SnowCloud.co.uk">
 
@@ -50,7 +50,7 @@
                           | <a href="/password_reset/">{% trans "Forgotten user name or password?" %}</a>
                           {% comment %}| <a href="/accounts/register/">{% trans "Register" %}</a></p>{% endcomment %}
                 {% endif %}
-                <div class="language_menu">
+                <div class="language_menu">                
                     <form id="setlang" action="/s/setlang/" method="post">{% csrf_token %}
                         {# <img src='/static/media/flags/{{ LANGUAGE_CODE }}.png'> #}
                         <input name="next" type="hidden" value="{{ REQ_FULL_PATH|nologout }}" />
@@ -68,8 +68,8 @@
 	<div class="container-wrapper site-header">
     	<div class="container">
     		<div class="eight columns alpha">
-    			<h1>Snowhite</h1>
-    			<p>A playground for the ClinicalTemplates.org web framework.</p>
+    			<h1><span>open</span>EHR CKI</h1>
+    			<p>the Clinical Knowledge Incubator</p>
     		</div>
     		<div class="eight columns omega line-menu">
     		      <ul>
@@ -110,7 +110,7 @@
 	<div class="container-wrapper site-footer">
     	<div class="container">
     		<div class="sixteen columns">
-    			<p>A playground for the ClinicalTemplates.org web framework.</p>
+    			<p>Powered by the <a href="http://clinicaltemplates.org">ClinicalTemplates.org web framework</a>.</p>
     		</div>
     	</div>
     </div>
