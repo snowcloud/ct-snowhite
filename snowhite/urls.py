@@ -49,6 +49,8 @@ urlpatterns = patterns('',
     url(r'^contact/sent/$', TemplateView.as_view(template_name='contact_form/contact_form_sent.html'),
         name='contact_form_sent'),
 
+    (r'^fr/', include('ct_fileresource.urls')),
+
     (r'^feeds/latestnews/$', BlogPostsPublicFeed()),
     (r'^notices/', include('notification.urls')),
 
@@ -84,5 +86,4 @@ if settings.DEBUG:
 if settings.TESTING or settings.DEBUG:
     urlpatterns += patterns('',
        (r'', include('wiki.static_urls')), # static files, testing only
-       (r'^fr/', include('ct_fileresource.urls')), # testing only
     )
